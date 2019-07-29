@@ -21,7 +21,8 @@ namespace ProyectoFinal.UI.Registros
 
         public void LimpiarCampos()
         {
-            throw new NotImplementedException();
+            IDnumericUpDown.Value = 0;
+
         }
 
         public void LlenaCampos(Usuarios obj)

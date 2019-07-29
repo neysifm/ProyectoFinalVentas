@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroUsuarios));
             this.BuscarmetroButton = new MetroFramework.Controls.MetroButton();
-            this.ConfirmarClavemetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.EliminarmetroButton = new MetroFramework.Controls.MetroButton();
             this.NuevometroButton = new MetroFramework.Controls.MetroButton();
             this.GuardarmetroButton = new MetroFramework.Controls.MetroButton();
@@ -58,45 +56,6 @@
             this.BuscarmetroButton.Size = new System.Drawing.Size(88, 29);
             this.BuscarmetroButton.TabIndex = 43;
             this.BuscarmetroButton.UseSelectable = true;
-            // 
-            // ConfirmarClavemetroTextBox
-            // 
-            // 
-            // 
-            // 
-            this.ConfirmarClavemetroTextBox.CustomButton.Image = null;
-            this.ConfirmarClavemetroTextBox.CustomButton.Location = new System.Drawing.Point(204, 1);
-            this.ConfirmarClavemetroTextBox.CustomButton.Name = "";
-            this.ConfirmarClavemetroTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.ConfirmarClavemetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.ConfirmarClavemetroTextBox.CustomButton.TabIndex = 1;
-            this.ConfirmarClavemetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.ConfirmarClavemetroTextBox.CustomButton.UseSelectable = true;
-            this.ConfirmarClavemetroTextBox.CustomButton.Visible = false;
-            this.ConfirmarClavemetroTextBox.Lines = new string[0];
-            this.ConfirmarClavemetroTextBox.Location = new System.Drawing.Point(146, 217);
-            this.ConfirmarClavemetroTextBox.MaxLength = 32767;
-            this.ConfirmarClavemetroTextBox.Name = "ConfirmarClavemetroTextBox";
-            this.ConfirmarClavemetroTextBox.PasswordChar = '\0';
-            this.ConfirmarClavemetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.ConfirmarClavemetroTextBox.SelectedText = "";
-            this.ConfirmarClavemetroTextBox.SelectionLength = 0;
-            this.ConfirmarClavemetroTextBox.SelectionStart = 0;
-            this.ConfirmarClavemetroTextBox.ShortcutsEnabled = true;
-            this.ConfirmarClavemetroTextBox.Size = new System.Drawing.Size(226, 23);
-            this.ConfirmarClavemetroTextBox.TabIndex = 42;
-            this.ConfirmarClavemetroTextBox.UseSelectable = true;
-            this.ConfirmarClavemetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ConfirmarClavemetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(42, 221);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(108, 19);
-            this.metroLabel5.TabIndex = 41;
-            this.metroLabel5.Text = "Confirmar Clave:";
             // 
             // EliminarmetroButton
             // 
@@ -142,7 +101,7 @@
             // UsuarioAdministradorradioButton
             // 
             this.UsuarioAdministradorradioButton.AutoSize = true;
-            this.UsuarioAdministradorradioButton.Location = new System.Drawing.Point(279, 256);
+            this.UsuarioAdministradorradioButton.Location = new System.Drawing.Point(284, 232);
             this.UsuarioAdministradorradioButton.Name = "UsuarioAdministradorradioButton";
             this.UsuarioAdministradorradioButton.Size = new System.Drawing.Size(88, 17);
             this.UsuarioAdministradorradioButton.TabIndex = 36;
@@ -153,7 +112,7 @@
             // UsuarioNormalradioButton
             // 
             this.UsuarioNormalradioButton.AutoSize = true;
-            this.UsuarioNormalradioButton.Location = new System.Drawing.Point(165, 256);
+            this.UsuarioNormalradioButton.Location = new System.Drawing.Point(169, 232);
             this.UsuarioNormalradioButton.Name = "UsuarioNormalradioButton";
             this.UsuarioNormalradioButton.Size = new System.Drawing.Size(97, 17);
             this.UsuarioNormalradioButton.TabIndex = 35;
@@ -224,7 +183,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(43, 254);
+            this.metroLabel4.Location = new System.Drawing.Point(43, 230);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(89, 19);
             this.metroLabel4.TabIndex = 32;
@@ -270,8 +229,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 388);
             this.Controls.Add(this.BuscarmetroButton);
-            this.Controls.Add(this.ConfirmarClavemetroTextBox);
-            this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.EliminarmetroButton);
             this.Controls.Add(this.NuevometroButton);
             this.Controls.Add(this.GuardarmetroButton);
@@ -297,8 +254,6 @@
         #endregion
 
         private MetroFramework.Controls.MetroButton BuscarmetroButton;
-        private MetroFramework.Controls.MetroTextBox ConfirmarClavemetroTextBox;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroButton EliminarmetroButton;
         private MetroFramework.Controls.MetroButton NuevometroButton;
         private MetroFramework.Controls.MetroButton GuardarmetroButton;
