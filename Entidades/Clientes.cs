@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,16 @@ namespace Entidades
             Telefono = telefono;
             Email = email;
             Fecha = fecha;
+        }
+
+        public Clientes()
+        {
+            ClienteId = 0;
+            Nombres = String.Empty;
+            Direccion = String.Empty;
+            Telefono = String.Empty;
+            Email = String.Empty;
+            Fecha = DateTime.Now;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroUsuarios));
             this.BuscarmetroButton = new MetroFramework.Controls.MetroButton();
             this.EliminarmetroButton = new MetroFramework.Controls.MetroButton();
@@ -43,8 +44,12 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NivelUsuariogroupBox = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            this.NivelUsuariogroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // BuscarmetroButton
@@ -56,6 +61,7 @@
             this.BuscarmetroButton.Size = new System.Drawing.Size(88, 29);
             this.BuscarmetroButton.TabIndex = 43;
             this.BuscarmetroButton.UseSelectable = true;
+            this.BuscarmetroButton.Click += new System.EventHandler(this.BuscarmetroButton_Click);
             // 
             // EliminarmetroButton
             // 
@@ -66,6 +72,7 @@
             this.EliminarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.EliminarmetroButton.TabIndex = 39;
             this.EliminarmetroButton.UseSelectable = true;
+            this.EliminarmetroButton.Click += new System.EventHandler(this.EliminarmetroButton_Click);
             // 
             // NuevometroButton
             // 
@@ -76,6 +83,7 @@
             this.NuevometroButton.Size = new System.Drawing.Size(75, 31);
             this.NuevometroButton.TabIndex = 38;
             this.NuevometroButton.UseSelectable = true;
+            this.NuevometroButton.Click += new System.EventHandler(this.NuevometroButton_Click);
             // 
             // GuardarmetroButton
             // 
@@ -86,6 +94,7 @@
             this.GuardarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.GuardarmetroButton.TabIndex = 40;
             this.GuardarmetroButton.UseSelectable = true;
+            this.GuardarmetroButton.Click += new System.EventHandler(this.GuardarmetroButton_Click);
             // 
             // pictureBox1
             // 
@@ -101,7 +110,7 @@
             // UsuarioAdministradorradioButton
             // 
             this.UsuarioAdministradorradioButton.AutoSize = true;
-            this.UsuarioAdministradorradioButton.Location = new System.Drawing.Point(284, 232);
+            this.UsuarioAdministradorradioButton.Location = new System.Drawing.Point(121, 19);
             this.UsuarioAdministradorradioButton.Name = "UsuarioAdministradorradioButton";
             this.UsuarioAdministradorradioButton.Size = new System.Drawing.Size(88, 17);
             this.UsuarioAdministradorradioButton.TabIndex = 36;
@@ -112,7 +121,7 @@
             // UsuarioNormalradioButton
             // 
             this.UsuarioNormalradioButton.AutoSize = true;
-            this.UsuarioNormalradioButton.Location = new System.Drawing.Point(169, 232);
+            this.UsuarioNormalradioButton.Location = new System.Drawing.Point(18, 19);
             this.UsuarioNormalradioButton.Name = "UsuarioNormalradioButton";
             this.UsuarioNormalradioButton.Size = new System.Drawing.Size(97, 17);
             this.UsuarioNormalradioButton.TabIndex = 35;
@@ -183,7 +192,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(43, 230);
+            this.metroLabel4.Location = new System.Drawing.Point(43, 251);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(89, 19);
             this.metroLabel4.TabIndex = 32;
@@ -223,18 +232,31 @@
             this.IDnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.IDnumericUpDown.TabIndex = 28;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // NivelUsuariogroupBox
+            // 
+            this.NivelUsuariogroupBox.Controls.Add(this.UsuarioNormalradioButton);
+            this.NivelUsuariogroupBox.Controls.Add(this.UsuarioAdministradorradioButton);
+            this.NivelUsuariogroupBox.Location = new System.Drawing.Point(146, 219);
+            this.NivelUsuariogroupBox.Name = "NivelUsuariogroupBox";
+            this.NivelUsuariogroupBox.Size = new System.Drawing.Size(226, 51);
+            this.NivelUsuariogroupBox.TabIndex = 44;
+            this.NivelUsuariogroupBox.TabStop = false;
+            // 
             // RegistroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 388);
+            this.Controls.Add(this.NivelUsuariogroupBox);
             this.Controls.Add(this.BuscarmetroButton);
             this.Controls.Add(this.EliminarmetroButton);
             this.Controls.Add(this.NuevometroButton);
             this.Controls.Add(this.GuardarmetroButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.UsuarioAdministradorradioButton);
-            this.Controls.Add(this.UsuarioNormalradioButton);
             this.Controls.Add(this.ClavemetroTextBox);
             this.Controls.Add(this.NombremetroTextBox);
             this.Controls.Add(this.metroLabel4);
@@ -246,6 +268,9 @@
             this.Text = "REGISTRO DE USUARIOS";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            this.NivelUsuariogroupBox.ResumeLayout(false);
+            this.NivelUsuariogroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +292,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.NumericUpDown IDnumericUpDown;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.GroupBox NivelUsuariogroupBox;
     }
 }

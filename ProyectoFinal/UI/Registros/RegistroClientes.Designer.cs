@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroClientes));
             this.BuscarClientemetroButton = new MetroFramework.Controls.MetroButton();
             this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -48,8 +49,10 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // BuscarClientemetroButton
@@ -61,6 +64,7 @@
             this.BuscarClientemetroButton.Size = new System.Drawing.Size(86, 29);
             this.BuscarClientemetroButton.TabIndex = 45;
             this.BuscarClientemetroButton.UseSelectable = true;
+            this.BuscarClientemetroButton.Click += new System.EventHandler(this.BuscarClientemetroButton_Click);
             // 
             // TelefonomaskedTextBox
             // 
@@ -89,6 +93,7 @@
             this.NuevometroButton.Size = new System.Drawing.Size(75, 31);
             this.NuevometroButton.TabIndex = 41;
             this.NuevometroButton.UseSelectable = true;
+            this.NuevometroButton.Click += new System.EventHandler(this.NuevometroButton_Click);
             // 
             // GuardarmetroButton
             // 
@@ -99,6 +104,7 @@
             this.GuardarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.GuardarmetroButton.TabIndex = 43;
             this.GuardarmetroButton.UseSelectable = true;
+            this.GuardarmetroButton.Click += new System.EventHandler(this.GuardarmetroButton_Click);
             // 
             // pictureBox1
             // 
@@ -288,6 +294,10 @@
             this.metroLabel1.TabIndex = 27;
             this.metroLabel1.Text = "ID:";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // RegistroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +326,7 @@
             this.Text = "REGISTRO DE CLIENTES";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +353,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCategorias));
             this.BuscarmetroButton = new MetroFramework.Controls.MetroButton();
             this.EliminarmetroButton = new MetroFramework.Controls.MetroButton();
@@ -37,7 +38,9 @@
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel = new MetroFramework.Controls.MetroLabel();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // BuscarmetroButton
@@ -50,6 +53,7 @@
             this.BuscarmetroButton.TabIndex = 36;
             this.BuscarmetroButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarmetroButton.UseSelectable = true;
+            this.BuscarmetroButton.Click += new System.EventHandler(this.BuscarmetroButton_Click);
             // 
             // EliminarmetroButton
             // 
@@ -60,6 +64,7 @@
             this.EliminarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.EliminarmetroButton.TabIndex = 34;
             this.EliminarmetroButton.UseSelectable = true;
+            this.EliminarmetroButton.Click += new System.EventHandler(this.EliminarmetroButton_Click);
             // 
             // NuevometroButton
             // 
@@ -70,6 +75,7 @@
             this.NuevometroButton.Size = new System.Drawing.Size(75, 31);
             this.NuevometroButton.TabIndex = 33;
             this.NuevometroButton.UseSelectable = true;
+            this.NuevometroButton.Click += new System.EventHandler(this.NuevometroButton_Click);
             // 
             // GuardarmetroButton
             // 
@@ -80,6 +86,7 @@
             this.GuardarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.GuardarmetroButton.TabIndex = 35;
             this.GuardarmetroButton.UseSelectable = true;
+            this.GuardarmetroButton.Click += new System.EventHandler(this.GuardarmetroButton_Click);
             // 
             // CategoriametroTextBox
             // 
@@ -136,6 +143,10 @@
             this.metroLabel.TabIndex = 29;
             this.metroLabel.Text = "ID:";
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // RegistroCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +163,7 @@
             this.Name = "RegistroCategorias";
             this.Text = "REGISTRO DE CATEGORIAS";
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +179,6 @@
         private System.Windows.Forms.NumericUpDown IDnumericUpDown;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

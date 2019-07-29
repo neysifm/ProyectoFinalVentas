@@ -77,6 +77,7 @@
             this.EliminarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.EliminarmetroButton.TabIndex = 28;
             this.EliminarmetroButton.UseSelectable = true;
+            this.EliminarmetroButton.Click += new System.EventHandler(this.EliminarmetroButton_Click);
             // 
             // NuevometroButton
             // 
@@ -87,6 +88,7 @@
             this.NuevometroButton.Size = new System.Drawing.Size(75, 31);
             this.NuevometroButton.TabIndex = 27;
             this.NuevometroButton.UseSelectable = true;
+            this.NuevometroButton.Click += new System.EventHandler(this.NuevometroButton_Click);
             // 
             // GuardarmetroButton
             // 
@@ -97,6 +99,7 @@
             this.GuardarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.GuardarmetroButton.TabIndex = 29;
             this.GuardarmetroButton.UseSelectable = true;
+            this.GuardarmetroButton.Click += new System.EventHandler(this.GuardarmetroButton_Click);
             // 
             // groupBox2
             // 
@@ -122,6 +125,7 @@
             this.AgregarCategoriametroButton.Size = new System.Drawing.Size(34, 25);
             this.AgregarCategoriametroButton.TabIndex = 21;
             this.AgregarCategoriametroButton.UseSelectable = true;
+            this.AgregarCategoriametroButton.Click += new System.EventHandler(this.AgregarCategoriametroButton_Click);
             // 
             // BuscarCategoriametroButton
             // 
@@ -133,6 +137,7 @@
             this.BuscarCategoriametroButton.TabIndex = 20;
             this.BuscarCategoriametroButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarCategoriametroButton.UseSelectable = true;
+            this.BuscarCategoriametroButton.Click += new System.EventHandler(this.BuscarCategoriametroButton_Click);
             // 
             // DescripcionCategoriametroTextBox
             // 
@@ -227,6 +232,7 @@
             this.BuscarProductometroButton.TabIndex = 19;
             this.BuscarProductometroButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarProductometroButton.UseSelectable = true;
+            this.BuscarProductometroButton.Click += new System.EventHandler(this.BuscarProductometroButton_Click);
             // 
             // metroTile2
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,17 @@ namespace Entidades
             Balance = balance;
             Fecha = fecha;
             DetalleVenta = detalleVenta;
+        }
+
+        public Ventas()
+        {
+            VentaId = 0;
+            ClienteId = 0;
+            ITBIS = 0;
+            Monto = 0;
+            Balance = 0;
+            Fecha = DateTime.Now;
+            DetalleVenta = new List<DetalleVentas>();
         }
     }
 }

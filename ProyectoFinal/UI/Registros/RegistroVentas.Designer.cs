@@ -94,6 +94,7 @@
             this.NuevometroButton.Size = new System.Drawing.Size(75, 31);
             this.NuevometroButton.TabIndex = 24;
             this.NuevometroButton.UseSelectable = true;
+            this.NuevometroButton.Click += new System.EventHandler(this.NuevometroButton_Click);
             // 
             // GuardarmetroButton
             // 
@@ -104,6 +105,7 @@
             this.GuardarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.GuardarmetroButton.TabIndex = 26;
             this.GuardarmetroButton.UseSelectable = true;
+            this.GuardarmetroButton.Click += new System.EventHandler(this.GuardarmetroButton_Click);
             // 
             // groupBox2
             // 
@@ -232,6 +234,7 @@
             this.BuscarProductometroButton.Size = new System.Drawing.Size(28, 20);
             this.BuscarProductometroButton.TabIndex = 17;
             this.BuscarProductometroButton.UseSelectable = true;
+            this.BuscarProductometroButton.Click += new System.EventHandler(this.BuscarProductometroButton_Click);
             // 
             // metroLabel11
             // 
@@ -360,6 +363,7 @@
             this.BuscarClientemetroButton.Size = new System.Drawing.Size(75, 29);
             this.BuscarClientemetroButton.TabIndex = 17;
             this.BuscarClientemetroButton.UseSelectable = true;
+            this.BuscarClientemetroButton.Click += new System.EventHandler(this.BuscarClientemetroButton_Click);
             // 
             // metroLabel8
             // 
@@ -483,6 +487,7 @@
             this.BuscarVentametroButton.TabIndex = 11;
             this.BuscarVentametroButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarVentametroButton.UseSelectable = true;
+            this.BuscarVentametroButton.Click += new System.EventHandler(this.BuscarVentametroButton_Click);
             // 
             // ITBISnumericUpDown
             // 
