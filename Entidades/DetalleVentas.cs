@@ -15,14 +15,16 @@ namespace Entidades
         public int VentaId { get; set; }
         public int Cantidad { get; set; }
         public Decimal Precio { get; set; }
+        public Decimal Subtotal { get; set; }
 
-        public DetalleVentas(int detalleVentaId, int productoId, int ventaId, int cantidad, decimal precio)
+        public DetalleVentas(int detalleVentaId, int productoId, int ventaId, int cantidad, decimal precio, decimal subtotal)
         {
             DetalleVentaId = detalleVentaId;
             ProductoId = productoId;
             VentaId = ventaId;
             Cantidad = cantidad;
             Precio = precio;
+            Subtotal = subtotal;
         }
 
         public DetalleVentas()
@@ -32,6 +34,12 @@ namespace Entidades
             VentaId = 0;
             Cantidad = 0;
             Precio = 0;
+            Subtotal = 0;
+        }
+
+        public void CalularSubTotal()
+        {
+            Subtotal = Precio * Cantidad;
         }
     }
 }

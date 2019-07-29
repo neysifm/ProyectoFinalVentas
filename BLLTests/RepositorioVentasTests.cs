@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 namespace BLL.Tests
 {
@@ -14,54 +15,29 @@ namespace BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            List<VentaDetalles> lista = new List<VentaDetalles>();
+            List<DetalleVentas> lista = new List<DetalleVentas>();
 
-            lista.Add(new VentaDetalles()
+            lista.Add(new DetalleVentas()
             {
-                IdProducto = 1,
+                ProductoId = 1,
                 Cantidad = 2,
-                Precio = 2500
+                Precio = 200
             });
 
             lista[0].CalularSubTotal();
 
             Ventas venta = new Ventas()
             {
-                IdCliente = 1,
-                IdUsuario = 1,
-                IdVendedor = 1,
-                IdVenta = 0,
-                HastaFecha = DateTime.Now.AddDays(5),
-                TasaInteres = 5,
-                TipoVeta = TiposVentas.Contado,
-                Total = 0,
-                Detalles = lista
+                ClienteId = 1,
+                VentaId = 1,
+                ITBIS = 3,
+                Monto = 300,
+                Balance = 500,
+                Fecha = DateTime.Now.AddDays(2),
+                DetalleVenta = lista
             };
-
-
-            RepositorioVentas db = new RepositorioVentas();
-
-
-            Assert.IsTrue(db.Guardar(venta));
-     
-        }
-
-        [TestMethod()]
-        public void ModificarTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void BuscarTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void EliminarTest()
-        {
-            Assert.Fail();
+            RepositorioVentas contexto = new RepositorioVentas();
+            Assert.IsTrue(contexto.Guardar(venta));   
         }
     }
 }

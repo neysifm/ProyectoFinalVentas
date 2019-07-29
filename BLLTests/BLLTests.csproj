@@ -75,6 +75,10 @@
       <Project>{43D42053-D61A-4AA0-8883-D6D713414124}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{32606cb1-0a69-4f10-8d08-61764af73a79}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

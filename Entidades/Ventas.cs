@@ -16,9 +16,10 @@ namespace Entidades
         public Decimal Monto { get; set; }
         public Decimal Balance { get; set; }
         public DateTime Fecha { get; set; }
+        public Decimal Total { get; set; }
         public virtual List<DetalleVentas> DetalleVenta { get; set; }
 
-        public Ventas(int ventaId, int clienteId, decimal iTBIS, decimal monto, decimal balance, DateTime fecha, List<DetalleVentas> detalleVenta)
+        public Ventas(int ventaId, int clienteId, decimal iTBIS, decimal monto, decimal balance, DateTime fecha, decimal total, List<DetalleVentas> detalleVenta)
         {
             VentaId = ventaId;
             ClienteId = clienteId;
@@ -26,6 +27,7 @@ namespace Entidades
             Monto = monto;
             Balance = balance;
             Fecha = fecha;
+            Total = total;
             DetalleVenta = detalleVenta;
         }
 
@@ -36,6 +38,7 @@ namespace Entidades
             ITBIS = 0;
             Monto = 0;
             Balance = 0;
+            Total = 0;
             Fecha = DateTime.Now;
             DetalleVenta = new List<DetalleVentas>();
         }

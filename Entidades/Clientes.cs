@@ -16,8 +16,9 @@ namespace Entidades
         public String Telefono { get; set; }
         public String Email { get; set; }
         public DateTime Fecha { get; set; }
+        public Decimal Balance { get; set; }
 
-        public Clientes(int clienteId, string nombres, string direccion, string telefono, string email, DateTime fecha)
+        public Clientes(int clienteId, string nombres, string direccion, string telefono, string email, DateTime fecha, decimal balance)
         {
             ClienteId = clienteId;
             Nombres = nombres;
@@ -25,6 +26,7 @@ namespace Entidades
             Telefono = telefono;
             Email = email;
             Fecha = fecha;
+            Balance = balance;
         }
 
         public Clientes()
@@ -35,6 +37,7 @@ namespace Entidades
             Telefono = String.Empty;
             Email = String.Empty;
             Fecha = DateTime.Now;
+            Balance = 0;
         }
     }
 }

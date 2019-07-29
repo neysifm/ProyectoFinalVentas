@@ -21,6 +21,7 @@ namespace BLL
             bool paso = false;
 
             RepositorioBase<Productos> conextoProducto = new RepositorioBase<Productos>();
+            RepositorioBase<Clientes> contextoCliente = new RepositorioBase<Clientes>();
             _ = new Productos();
 
             foreach (var item in entity.DetalleVenta)
@@ -30,6 +31,12 @@ namespace BLL
                 conextoProducto.Modificar(producto);
             }
 
+            foreach (var tem in entity.DetalleVenta)
+            {
+                Clientes cliente = contextoCliente.Buscar(entity.ClienteId);
+                cliente.Balance -= entity.Total;
+                contextoCliente.Modificar(cliente);
+            }
             try
             {
                 if (contexto.Venta.Add(entity) != null)
@@ -49,16 +56,19 @@ namespace BLL
         public override bool Modificar(Ventas entity)
         {
             bool paso = false;
-
             contexto = new Contexto();
 
             Contexto contexto1 = new Contexto();
             RepositorioBase<Productos> contextoProductos = new RepositorioBase<Productos>();
             RepositorioBase<DetalleVentas> contextoVentas = new RepositorioBase<DetalleVentas>();
+            RepositorioBase<Clientes> contextoCliente = new RepositorioBase<Clientes>();
 
             try
             {
                 var temp = contexto1.Venta.Find(entity.VentaId);
+                Clientes clientes = contextoCliente.Buscar(temp.ClienteId);
+                clientes.Balance -= temp.Total;
+                contextoCliente.Modificar(clientes);
 
                 foreach (var item in temp.DetalleVenta)
                 {
@@ -91,7 +101,7 @@ namespace BLL
                 throw;
             }
             return paso;
-        }
+    }
 
         // METODO BUSCAR
         public override Ventas Buscar(int id)
@@ -116,14 +126,17 @@ namespace BLL
         public override bool Eliminar(int id)
         {
             bool paso = false;
-
             contexto = new Contexto();
             RepositorioBase<Productos> contextoProductos = new RepositorioBase<Productos>();
             RepositorioBase<DetalleVentas> contextoVentas = new RepositorioBase<DetalleVentas>();
+            RepositorioBase<Clientes> contextoClientes = new RepositorioBase<Clientes>();
 
             try
             {
                 Ventas eliminar = contexto.Venta.Find(id);
+                Clientes clientes = contextoClientes.Buscar(eliminar.ClienteId);
+                clientes.Balance -= eliminar.Total;
+                contextoClientes.Modificar(clientes);
 
                 if (eliminar != null)
                 {
@@ -151,3 +164,6 @@ namespace BLL
         }
     }
 }
+
+
+ 
