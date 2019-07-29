@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.UI.Registros
 {
-    public partial class RegistroCategorias : Form
+    public partial class RegistroCategorias : MetroFramework.Forms.MetroForm
     {
         public RegistroCategorias()
         {

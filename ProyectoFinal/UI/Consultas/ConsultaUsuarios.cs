@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.UI.Consultas
 {
-    public partial class ConsultaUsuarios : Form
+    public partial class ConsultaUsuarios : MetroFramework.Forms.MetroForm
     {
         public ConsultaUsuarios()
         {

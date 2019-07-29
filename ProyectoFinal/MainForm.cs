@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MetroFramework.Forms.MetroForm
     {
         public MainForm()
         {
