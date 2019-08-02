@@ -53,17 +53,17 @@ namespace ProyectoFinal.UI.Registros
 
         public Productos LlenaClase()
         {
-            Productos productos = new Productos()
-            {
-                ProductoId = Convert.ToInt32(IDProductonumericUpDown.Value),
-                Nombre = NombremetroTextBox.Text,
-                Descripcion = DescripcionProductometroTextBox.Text,
-                ITBIS = Convert.ToInt32(ITBISnumericUpDown.Value),
-                Costo = Convert.ToInt32(CostonumericUpDown.Value),
-                Precio = Convert.ToInt32(PrecionumericUpDown.Value),
-                Stock = Convert.ToInt32(StockmetroTextBox.Text),
-                Fecha = FechametroDateTime.Value,
-            };
+            Productos productos = new Productos();
+
+            productos.ProductoId = Convert.ToInt32(IDProductonumericUpDown.Value);
+                productos.Nombre = NombremetroTextBox.Text;
+                productos.Descripcion = DescripcionProductometroTextBox.Text;
+                productos.ITBIS = Convert.ToInt32(ITBISnumericUpDown.Value);
+                productos.Costo = Convert.ToInt32(CostonumericUpDown.Value);
+                productos.Precio = Convert.ToInt32(PrecionumericUpDown.Value);
+                productos.Stock = Convert.ToInt32(StockmetroTextBox.Text);
+                productos.Fecha = FechametroDateTime.Value;
+            
             return productos;
         }
 
@@ -95,7 +95,14 @@ namespace ProyectoFinal.UI.Registros
 
         public bool ValidarCampos()
         {
-            throw new NotImplementedException();
+            bool validar = true;
+
+            if (string.IsNullOrEmpty(NombremetroTextBox.Text))
+            {
+                errorProvider.SetError(NombremetroTextBox, "El nombre no puede estar vacio, Llenar Nombre");
+                validar = false;
+            }
+            return validar; 
         }
 
         public bool ValidarEliminar()

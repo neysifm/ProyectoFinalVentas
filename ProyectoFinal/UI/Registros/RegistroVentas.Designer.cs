@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroVentas));
             this.EliminarmetroButton = new MetroFramework.Controls.MetroButton();
             this.NuevometroButton = new MetroFramework.Controls.MetroButton();
@@ -65,6 +66,7 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaProductosdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
@@ -73,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.IDClientenumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ITBISnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // EliminarmetroButton
@@ -194,6 +197,7 @@
             this.AgregarProductometroButton.Size = new System.Drawing.Size(34, 22);
             this.AgregarProductometroButton.TabIndex = 19;
             this.AgregarProductometroButton.UseSelectable = true;
+            this.AgregarProductometroButton.Click += new System.EventHandler(this.AgregarProductometroButton_Click);
             // 
             // NombreProductometroTextBox
             // 
@@ -342,7 +346,7 @@
             this.NombreClientemetroTextBox.Location = new System.Drawing.Point(71, 170);
             this.NombreClientemetroTextBox.MaxLength = 32767;
             this.NombreClientemetroTextBox.Name = "NombreClientemetroTextBox";
-            this.NombreClientemetroTextBox.PasswordChar = '\0';
+            this.NombreClientemetroTextBox.PasswordChar = '●';
             this.NombreClientemetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.NombreClientemetroTextBox.SelectedText = "";
             this.NombreClientemetroTextBox.SelectionLength = 0;
@@ -351,6 +355,7 @@
             this.NombreClientemetroTextBox.Size = new System.Drawing.Size(175, 23);
             this.NombreClientemetroTextBox.TabIndex = 18;
             this.NombreClientemetroTextBox.UseSelectable = true;
+            this.NombreClientemetroTextBox.UseSystemPasswordChar = true;
             this.NombreClientemetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.NombreClientemetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -539,11 +544,15 @@
             this.IDnumericUpDown.Size = new System.Drawing.Size(90, 20);
             this.IDnumericUpDown.TabIndex = 0;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // RegistroVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 573);
+            this.ClientSize = new System.Drawing.Size(600, 573);
             this.Controls.Add(this.EliminarmetroButton);
             this.Controls.Add(this.NuevometroButton);
             this.Controls.Add(this.GuardarmetroButton);
@@ -561,6 +570,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.IDClientenumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ITBISnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -603,5 +613,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.NumericUpDown IDnumericUpDown;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

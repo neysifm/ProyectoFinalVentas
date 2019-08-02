@@ -55,7 +55,12 @@ namespace ProyectoFinal.UI.Registros
 
         public Ventas LlenaClase()
         {
-            throw new NotImplementedException();
+            Ventas usuarios = new Ventas()
+            {
+                VentaId = Convert.ToInt32(IDnumericUpDown.Value),
+                ClienteId = Convert.ToInt32(IDClientenumericUpDown.Value),
+            };
+            return usuarios;
         }
 
         public bool ValidarBuscar()
@@ -99,7 +104,15 @@ namespace ProyectoFinal.UI.Registros
 
         public bool ValidarCampos()
         {
-            throw new NotImplementedException();
+            bool validar = true;
+
+            if (string.IsNullOrEmpty(NombreClientemetroTextBox.Text))
+            {
+                errorProvider.SetError(NombreClientemetroTextBox, "El nombre no puede estar vacio, Llenar Nombre");
+                validar = false;
+            }
+            return validar;
+
         }
 
         public bool ValidarEliminar()
@@ -207,6 +220,44 @@ namespace ProyectoFinal.UI.Registros
             {
                 MessageBox.Show("Ocurrio un error", "Ups!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        List<Productos> listaVentas = new List<Productos>();
+        List<int> listaPrecios = new List<int>();
+        
+
+        private void AgregarProductometroButton_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(IDProductosnumericUpDown.Value);
+            int cantidad = Convert.ToInt32(this.CantidadnumericUpDown.Value);
+            Productos producto = new RepositorioBase<Productos>().Buscar(id);
+            listaVentas.Add(producto);
+            listaPrecios.Add(cantidad);
+            ActualizarGrid();
+            
+        }
+
+        private void ActualizarGrid()
+        {
+            this.ConsultaProductosdataGridView.DataSource = null;
+            this.ConsultaProductosdataGridView.DataSource = listaVentas;
+            this.ConsultaProductosdataGridView.Update();
+            ActualizarMonto();
+        }
+
+        private void ActualizarMonto()
+        {
+               
+            decimal monto = 0;
+            int i = 0;
+            
+            foreach (var item in listaVentas)
+            {
+                int cantidad = listaPrecios[i++];
+                monto += (item.Precio * cantidad);
+            }
+
+            this.MontometroTextBox.Text = monto.ToString();
+            this.TotalmetroTextBox.Text = monto.ToString();
         }
     }
 }

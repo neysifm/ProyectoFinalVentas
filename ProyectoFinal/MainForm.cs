@@ -1,4 +1,5 @@
-﻿using ProyectoFinal.UI.Registros;
+﻿using ProyectoFinal.UI.Consultas;
+using ProyectoFinal.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,36 @@ namespace ProyectoFinal
         {
             AcercaDe ayuda = new AcercaDe();
             ayuda.ShowDialog();
+        }
+
+        private void ConsultaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaUsuarios ConUsu = new ConsultaUsuarios();
+            ConUsu.ShowDialog();
+        }
+
+        private void ConsultadDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaClientes ConCl = new ConsultaClientes();
+            ConCl.ShowDialog();
+        }
+
+        private void ConsultaDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaProductos ConPro = new ConsultaProductos();
+            ConPro.ShowDialog();
+        }
+
+        private void CosultaDeCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaCategorias ConCat = new ConsultaCategorias();
+            ConCat.ShowDialog();
+        }
+
+        private void ConsultaDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaVentas ConVen = new ConsultaVentas();
+            ConVen.ShowDialog();
         }
     }
 }

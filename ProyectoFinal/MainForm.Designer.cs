@@ -155,6 +155,7 @@
             this.consultaDeUsuariosToolStripMenuItem.Name = "consultaDeUsuariosToolStripMenuItem";
             this.consultaDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.consultaDeUsuariosToolStripMenuItem.Text = "Consulta de Usuarios";
+            this.consultaDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.ConsultaDeUsuariosToolStripMenuItem_Click);
             // 
             // consultadDeClientesToolStripMenuItem
             // 
@@ -162,6 +163,7 @@
             this.consultadDeClientesToolStripMenuItem.Name = "consultadDeClientesToolStripMenuItem";
             this.consultadDeClientesToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.consultadDeClientesToolStripMenuItem.Text = "Consulta de Clientes";
+            this.consultadDeClientesToolStripMenuItem.Click += new System.EventHandler(this.ConsultadDeClientesToolStripMenuItem_Click);
             // 
             // consultaDeProductosToolStripMenuItem
             // 
@@ -169,6 +171,7 @@
             this.consultaDeProductosToolStripMenuItem.Name = "consultaDeProductosToolStripMenuItem";
             this.consultaDeProductosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.consultaDeProductosToolStripMenuItem.Text = "Consulta de Productos";
+            this.consultaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.ConsultaDeProductosToolStripMenuItem_Click);
             // 
             // cosultaDeCategoriasToolStripMenuItem
             // 
@@ -176,6 +179,7 @@
             this.cosultaDeCategoriasToolStripMenuItem.Name = "cosultaDeCategoriasToolStripMenuItem";
             this.cosultaDeCategoriasToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.cosultaDeCategoriasToolStripMenuItem.Text = "Consulta de Categorias";
+            this.cosultaDeCategoriasToolStripMenuItem.Click += new System.EventHandler(this.CosultaDeCategoriasToolStripMenuItem_Click);
             // 
             // consultaDeVentasToolStripMenuItem
             // 
@@ -183,6 +187,7 @@
             this.consultaDeVentasToolStripMenuItem.Name = "consultaDeVentasToolStripMenuItem";
             this.consultaDeVentasToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.consultaDeVentasToolStripMenuItem.Text = "Consulta de Ventas";
+            this.consultaDeVentasToolStripMenuItem.Click += new System.EventHandler(this.ConsultaDeVentasToolStripMenuItem_Click);
             // 
             // aboutByToolStripMenuItem
             // 

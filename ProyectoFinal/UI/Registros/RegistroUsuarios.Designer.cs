@@ -147,7 +147,7 @@
             this.ClavemetroTextBox.Location = new System.Drawing.Point(146, 178);
             this.ClavemetroTextBox.MaxLength = 32767;
             this.ClavemetroTextBox.Name = "ClavemetroTextBox";
-            this.ClavemetroTextBox.PasswordChar = '\0';
+            this.ClavemetroTextBox.PasswordChar = '●';
             this.ClavemetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.ClavemetroTextBox.SelectedText = "";
             this.ClavemetroTextBox.SelectionLength = 0;
@@ -156,6 +156,7 @@
             this.ClavemetroTextBox.Size = new System.Drawing.Size(226, 23);
             this.ClavemetroTextBox.TabIndex = 34;
             this.ClavemetroTextBox.UseSelectable = true;
+            this.ClavemetroTextBox.UseSystemPasswordChar = true;
             this.ClavemetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.ClavemetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
