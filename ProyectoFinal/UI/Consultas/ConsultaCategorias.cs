@@ -15,7 +15,7 @@ namespace ProyectoFinal.UI.Consultas
     public partial class ConsultaCategorias : MetroFramework.Forms.MetroForm
     {
         private List<Categorias> listado;
-        public ConsultaCategotias()
+        public ConsultaCategorias()
         {
             InitializeComponent();
             listado = new List<Categorias>();
@@ -62,6 +62,31 @@ namespace ProyectoFinal.UI.Consultas
             }
 
             ConsultadataGridView.DataSource = listado;
+        }
+
+        private void DesdemetroDateTime_ValueChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void HastametroDateTime_ValueChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void FiltrometroComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void CriteriometroTextBox_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void BuscarmetroButton_Click(object sender, EventArgs e)
+        {
+            Buscar();
         }
     }
 }

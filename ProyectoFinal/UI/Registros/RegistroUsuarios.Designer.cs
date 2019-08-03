@@ -48,7 +48,7 @@
             this.NivelUsuariogroupBox = new System.Windows.Forms.GroupBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.ConfirmarClavemetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.FechametroDateTime = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
@@ -269,35 +269,36 @@
             this.metroLabel6.TabIndex = 46;
             this.metroLabel6.Text = "Fecha Ingreso:";
             // 
-            // metroTextBox1
+            // ConfirmarClavemetroTextBox
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(204, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(146, 219);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(226, 23);
-            this.metroTextBox1.TabIndex = 47;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ConfirmarClavemetroTextBox.CustomButton.Image = null;
+            this.ConfirmarClavemetroTextBox.CustomButton.Location = new System.Drawing.Point(204, 1);
+            this.ConfirmarClavemetroTextBox.CustomButton.Name = "";
+            this.ConfirmarClavemetroTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.ConfirmarClavemetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.ConfirmarClavemetroTextBox.CustomButton.TabIndex = 1;
+            this.ConfirmarClavemetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.ConfirmarClavemetroTextBox.CustomButton.UseSelectable = true;
+            this.ConfirmarClavemetroTextBox.CustomButton.Visible = false;
+            this.ConfirmarClavemetroTextBox.Lines = new string[0];
+            this.ConfirmarClavemetroTextBox.Location = new System.Drawing.Point(146, 219);
+            this.ConfirmarClavemetroTextBox.MaxLength = 32767;
+            this.ConfirmarClavemetroTextBox.Name = "ConfirmarClavemetroTextBox";
+            this.ConfirmarClavemetroTextBox.PasswordChar = '●';
+            this.ConfirmarClavemetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ConfirmarClavemetroTextBox.SelectedText = "";
+            this.ConfirmarClavemetroTextBox.SelectionLength = 0;
+            this.ConfirmarClavemetroTextBox.SelectionStart = 0;
+            this.ConfirmarClavemetroTextBox.ShortcutsEnabled = true;
+            this.ConfirmarClavemetroTextBox.Size = new System.Drawing.Size(226, 23);
+            this.ConfirmarClavemetroTextBox.TabIndex = 47;
+            this.ConfirmarClavemetroTextBox.UseSelectable = true;
+            this.ConfirmarClavemetroTextBox.UseSystemPasswordChar = true;
+            this.ConfirmarClavemetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ConfirmarClavemetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // FechametroDateTime
             // 
@@ -314,7 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 404);
             this.Controls.Add(this.FechametroDateTime);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.ConfirmarClavemetroTextBox);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.NivelUsuariogroupBox);
@@ -361,7 +362,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.GroupBox NivelUsuariogroupBox;
         private MetroFramework.Controls.MetroDateTime FechametroDateTime;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox ConfirmarClavemetroTextBox;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
     }

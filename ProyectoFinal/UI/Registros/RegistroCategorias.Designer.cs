@@ -39,6 +39,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel = new MetroFramework.Controls.MetroLabel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.FechametroDateTime = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +61,7 @@
             // 
             this.EliminarmetroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarmetroButton.BackgroundImage")));
             this.EliminarmetroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EliminarmetroButton.Location = new System.Drawing.Point(249, 205);
+            this.EliminarmetroButton.Location = new System.Drawing.Point(249, 233);
             this.EliminarmetroButton.Name = "EliminarmetroButton";
             this.EliminarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.EliminarmetroButton.TabIndex = 34;
@@ -70,7 +72,7 @@
             // 
             this.NuevometroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NuevometroButton.BackgroundImage")));
             this.NuevometroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.NuevometroButton.Location = new System.Drawing.Point(27, 205);
+            this.NuevometroButton.Location = new System.Drawing.Point(27, 233);
             this.NuevometroButton.Name = "NuevometroButton";
             this.NuevometroButton.Size = new System.Drawing.Size(75, 31);
             this.NuevometroButton.TabIndex = 33;
@@ -81,7 +83,7 @@
             // 
             this.GuardarmetroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GuardarmetroButton.BackgroundImage")));
             this.GuardarmetroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.GuardarmetroButton.Location = new System.Drawing.Point(144, 205);
+            this.GuardarmetroButton.Location = new System.Drawing.Point(144, 233);
             this.GuardarmetroButton.Name = "GuardarmetroButton";
             this.GuardarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.GuardarmetroButton.TabIndex = 35;
@@ -103,7 +105,7 @@
             this.CategoriametroTextBox.CustomButton.UseSelectable = true;
             this.CategoriametroTextBox.CustomButton.Visible = false;
             this.CategoriametroTextBox.Lines = new string[0];
-            this.CategoriametroTextBox.Location = new System.Drawing.Point(115, 137);
+            this.CategoriametroTextBox.Location = new System.Drawing.Point(115, 128);
             this.CategoriametroTextBox.MaxLength = 32767;
             this.CategoriametroTextBox.Name = "CategoriametroTextBox";
             this.CategoriametroTextBox.PasswordChar = '\0';
@@ -128,11 +130,11 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(27, 141);
+            this.metroLabel2.Location = new System.Drawing.Point(27, 128);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(70, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(79, 19);
             this.metroLabel2.TabIndex = 30;
-            this.metroLabel2.Text = "Categoria:";
+            this.metroLabel2.Text = "Descripcion:";
             // 
             // metroLabel
             // 
@@ -147,11 +149,31 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(27, 180);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(46, 19);
+            this.metroLabel1.TabIndex = 37;
+            this.metroLabel1.Text = "Fecha:";
+            // 
+            // FechametroDateTime
+            // 
+            this.FechametroDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechametroDateTime.Location = new System.Drawing.Point(115, 170);
+            this.FechametroDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.FechametroDateTime.Name = "FechametroDateTime";
+            this.FechametroDateTime.Size = new System.Drawing.Size(207, 29);
+            this.FechametroDateTime.TabIndex = 38;
+            // 
             // RegistroCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 270);
+            this.ClientSize = new System.Drawing.Size(374, 294);
+            this.Controls.Add(this.FechametroDateTime);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.BuscarmetroButton);
             this.Controls.Add(this.EliminarmetroButton);
             this.Controls.Add(this.NuevometroButton);
@@ -180,5 +202,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private MetroFramework.Controls.MetroDateTime FechametroDateTime;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

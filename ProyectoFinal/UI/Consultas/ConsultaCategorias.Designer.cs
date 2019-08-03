@@ -87,6 +87,7 @@
             this.DesdemetroDateTime.Name = "DesdemetroDateTime";
             this.DesdemetroDateTime.Size = new System.Drawing.Size(105, 29);
             this.DesdemetroDateTime.TabIndex = 15;
+            this.DesdemetroDateTime.ValueChanged += new System.EventHandler(this.DesdemetroDateTime_ValueChanged);
             // 
             // metroLabel2
             // 
@@ -105,6 +106,7 @@
             this.HastametroDateTime.Name = "HastametroDateTime";
             this.HastametroDateTime.Size = new System.Drawing.Size(101, 29);
             this.HastametroDateTime.TabIndex = 16;
+            this.HastametroDateTime.ValueChanged += new System.EventHandler(this.HastametroDateTime_ValueChanged);
             // 
             // ImprimirmetroButton
             // 
@@ -133,16 +135,22 @@
             this.BuscarmetroButton.Size = new System.Drawing.Size(59, 24);
             this.BuscarmetroButton.TabIndex = 36;
             this.BuscarmetroButton.UseSelectable = true;
+            this.BuscarmetroButton.Click += new System.EventHandler(this.BuscarmetroButton_Click);
             // 
             // FiltrometroComboBox
             // 
             this.FiltrometroComboBox.FormattingEnabled = true;
             this.FiltrometroComboBox.ItemHeight = 23;
+            this.FiltrometroComboBox.Items.AddRange(new object[] {
+            "Todo",
+            "ID",
+            "Descripcion"});
             this.FiltrometroComboBox.Location = new System.Drawing.Point(432, 83);
             this.FiltrometroComboBox.Name = "FiltrometroComboBox";
             this.FiltrometroComboBox.Size = new System.Drawing.Size(173, 29);
             this.FiltrometroComboBox.TabIndex = 35;
             this.FiltrometroComboBox.UseSelectable = true;
+            this.FiltrometroComboBox.SelectedIndexChanged += new System.EventHandler(this.FiltrometroComboBox_SelectedIndexChanged);
             // 
             // CriteriometroTextBox
             // 
@@ -173,6 +181,7 @@
             this.CriteriometroTextBox.UseSelectable = true;
             this.CriteriometroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.CriteriometroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.CriteriometroTextBox.Click += new System.EventHandler(this.CriteriometroTextBox_Click);
             // 
             // metroLabel4
             // 

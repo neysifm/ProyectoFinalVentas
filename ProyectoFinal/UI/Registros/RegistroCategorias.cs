@@ -23,12 +23,14 @@ namespace ProyectoFinal.UI.Registros
         {
             IDnumericUpDown.Value = 0;
             CategoriametroTextBox.Clear();
+            FechametroDateTime.Value = DateTime.Now;
         }
 
         public void LlenaCampos(Categorias categorias)
         {
             IDnumericUpDown.Value = categorias.CategoriaId;
             CategoriametroTextBox.Text = categorias.Descripcion;
+            FechametroDateTime.Value = categorias.Fecha;
         }
 
         public Categorias LlenaClase()
@@ -37,6 +39,7 @@ namespace ProyectoFinal.UI.Registros
             {
                 CategoriaId = Convert.ToInt32(IDnumericUpDown.Value),
                 Descripcion = CategoriametroTextBox.Text,
+                Fecha = FechametroDateTime.Value
             };
             return categorias;
         }
