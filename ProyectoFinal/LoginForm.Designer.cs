@@ -30,6 +30,9 @@
         {
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtuser = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.btnlogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // metroTextBox1
@@ -70,22 +73,74 @@
             this.panel1.Size = new System.Drawing.Size(250, 326);
             this.panel1.TabIndex = 7;
             // 
-            // Login
+            // txtuser
+            // 
+            this.txtuser.BackColor = System.Drawing.Color.LightSlateGray;
+            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtuser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.ForeColor = System.Drawing.Color.White;
+            this.txtuser.Location = new System.Drawing.Point(269, 99);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(408, 20);
+            this.txtuser.TabIndex = 8;
+            this.txtuser.TextChanged += new System.EventHandler(this.Txtuser_TextChanged);
+            // 
+            // txtClave
+            // 
+            this.txtClave.BackColor = System.Drawing.Color.LightSlateGray;
+            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.ForeColor = System.Drawing.Color.White;
+            this.txtClave.Location = new System.Drawing.Point(269, 148);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(408, 20);
+            this.txtClave.TabIndex = 9;
+            this.txtClave.UseSystemPasswordChar = true;
+            this.txtClave.TextChanged += new System.EventHandler(this.TxtClave_TextChanged);
+            // 
+            // btnlogin
+            // 
+            this.btnlogin.BackColor = System.Drawing.Color.Gray;
+            this.btnlogin.Enabled = false;
+            this.btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
+            this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogin.ForeColor = System.Drawing.Color.LightGray;
+            this.btnlogin.Location = new System.Drawing.Point(269, 207);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(408, 40);
+            this.btnlogin.TabIndex = 11;
+            this.btnlogin.Text = "ACCEDER";
+            this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(700, 330);
+            this.Controls.Add(this.btnlogin);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroTextBox1);
-            this.Name = "Login";
+            this.Name = "LoginForm";
             this.Opacity = 0.9D;
             this.TransparencyKey = System.Drawing.Color.MidnightBlue;
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.Button btnlogin;
     }
 }

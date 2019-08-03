@@ -14,6 +14,9 @@ namespace ProyectoFinal.UI.Registros
 {
     public partial class RegistroUsuarios : MetroFramework.Forms.MetroForm, IFormularioRegistros<Usuarios>
     {
+        private bool claveValida = false;
+        
+
         public RegistroUsuarios()
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace ProyectoFinal.UI.Registros
             ClavemetroTextBox.Clear();
             ConfirmarClavemetroTextBox.Clear();
             FechametroDateTime.Value = DateTime.Now;
-            UsuarioNormalradioButton.Checked = false;
+            UsuarioNormalradioButton.Checked = true;
             UsuarioAdministradorradioButton.Checked = false;
         }
 
@@ -49,6 +52,7 @@ namespace ProyectoFinal.UI.Registros
                 Clave = ClavemetroTextBox.Text,
                 ConfirmarClave = ConfirmarClavemetroTextBox.Text,
                 Fecha = FechametroDateTime.Value,
+                NivelUsuario = (UsuarioNormalradioButton.Checked) ? "Normal" : "Administrador"
                // NivelUsuario
             };
             return usuarios;
@@ -130,7 +134,7 @@ namespace ProyectoFinal.UI.Registros
 
         private void GuardarmetroButton_Click(object sender, EventArgs e)
         {
-            if (!ValidarGuardar())
+            if (!ValidarGuardar() || !claveValida || !LoginInfo.ValidarAdministrador() || !ValidarNombreUsuario())
                 return;
             _ = new Usuarios();
             Usuarios usuario = LlenaClase();
@@ -168,6 +172,18 @@ namespace ProyectoFinal.UI.Registros
             }
         }
 
+        private bool ValidarNombreUsuario()
+        {
+            string nombre = NombremetroTextBox.Text;
+            if (string.IsNullOrEmpty(nombre)) return false;
+            bool paso = new RepositorioBase<Usuarios>().GetList(x => x.Nombre.Equals(nombre)).Count <= 0;
+            if (paso == false)
+            {
+                MessageBox.Show("Ya existe un usuario con este nombre, seleccione otro.");
+            }
+            return paso;
+        }
+
         private void EliminarmetroButton_Click(object sender, EventArgs e)
         {
             if (ValidarEliminar())
@@ -180,6 +196,22 @@ namespace ProyectoFinal.UI.Registros
             {
                 MessageBox.Show("No se Pudo Eliminar el registro");
             }
+        }
+
+        private void ConfirmarClavemetroTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string clave = ClavemetroTextBox.Text;
+            string confirmacion = ConfirmarClavemetroTextBox.Text;
+            if(confirmacion.Equals(clave) && (!string.IsNullOrEmpty(clave) || !string.IsNullOrWhiteSpace(clave)))
+            {
+                this.buttonVerificacion.BackColor = Color.Green;
+                claveValida = true;
+            } else
+            {
+                claveValida = false;
+                this.buttonVerificacion.BackColor = Color.Orange;
+            }
+
         }
     }
 }

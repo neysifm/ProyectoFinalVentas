@@ -50,6 +50,7 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.ConfirmarClavemetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.FechametroDateTime = new MetroFramework.Controls.MetroDateTime();
+            this.buttonVerificacion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -104,7 +105,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(387, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(434, 85);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(264, 288);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -118,13 +119,13 @@
             this.UsuarioAdministradorradioButton.Name = "UsuarioAdministradorradioButton";
             this.UsuarioAdministradorradioButton.Size = new System.Drawing.Size(88, 17);
             this.UsuarioAdministradorradioButton.TabIndex = 36;
-            this.UsuarioAdministradorradioButton.TabStop = true;
             this.UsuarioAdministradorradioButton.Text = "Administrador";
             this.UsuarioAdministradorradioButton.UseVisualStyleBackColor = true;
             // 
             // UsuarioNormalradioButton
             // 
             this.UsuarioNormalradioButton.AutoSize = true;
+            this.UsuarioNormalradioButton.Checked = true;
             this.UsuarioNormalradioButton.Location = new System.Drawing.Point(6, 12);
             this.UsuarioNormalradioButton.Name = "UsuarioNormalradioButton";
             this.UsuarioNormalradioButton.Size = new System.Drawing.Size(97, 17);
@@ -299,6 +300,7 @@
             this.ConfirmarClavemetroTextBox.UseSystemPasswordChar = true;
             this.ConfirmarClavemetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.ConfirmarClavemetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.ConfirmarClavemetroTextBox.TextChanged += new System.EventHandler(this.ConfirmarClavemetroTextBox_TextChanged);
             // 
             // FechametroDateTime
             // 
@@ -309,11 +311,22 @@
             this.FechametroDateTime.Size = new System.Drawing.Size(226, 29);
             this.FechametroDateTime.TabIndex = 48;
             // 
+            // buttonVerificacion
+            // 
+            this.buttonVerificacion.BackColor = System.Drawing.Color.White;
+            this.buttonVerificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerificacion.Location = new System.Drawing.Point(378, 219);
+            this.buttonVerificacion.Name = "buttonVerificacion";
+            this.buttonVerificacion.Size = new System.Drawing.Size(37, 23);
+            this.buttonVerificacion.TabIndex = 49;
+            this.buttonVerificacion.UseVisualStyleBackColor = false;
+            // 
             // RegistroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 404);
+            this.Controls.Add(this.buttonVerificacion);
             this.Controls.Add(this.FechametroDateTime);
             this.Controls.Add(this.ConfirmarClavemetroTextBox);
             this.Controls.Add(this.metroLabel6);
@@ -365,5 +378,6 @@
         private MetroFramework.Controls.MetroTextBox ConfirmarClavemetroTextBox;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
+        private System.Windows.Forms.Button buttonVerificacion;
     }
 }
