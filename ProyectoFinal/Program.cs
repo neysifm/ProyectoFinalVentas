@@ -9,7 +9,7 @@ namespace ProyectoFinal
     static class Program
     {
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Entrada Principal de Aplicacion VENSIS (Sistema de Ventas).
         /// </summary>
         [STAThread]
         static void Main()
