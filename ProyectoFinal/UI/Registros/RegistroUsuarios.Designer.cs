@@ -105,7 +105,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(434, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(378, 85);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(264, 288);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -315,9 +315,9 @@
             // 
             this.buttonVerificacion.BackColor = System.Drawing.Color.White;
             this.buttonVerificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVerificacion.Location = new System.Drawing.Point(378, 219);
+            this.buttonVerificacion.Location = new System.Drawing.Point(357, 219);
             this.buttonVerificacion.Name = "buttonVerificacion";
-            this.buttonVerificacion.Size = new System.Drawing.Size(37, 23);
+            this.buttonVerificacion.Size = new System.Drawing.Size(15, 23);
             this.buttonVerificacion.TabIndex = 49;
             this.buttonVerificacion.UseVisualStyleBackColor = false;
             // 

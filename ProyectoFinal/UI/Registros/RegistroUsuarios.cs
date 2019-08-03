@@ -40,7 +40,6 @@ namespace ProyectoFinal.UI.Registros
             ClavemetroTextBox.Text = usuarios.Clave;
             ConfirmarClavemetroTextBox.Text = usuarios.ConfirmarClave;
             FechametroDateTime.Value = usuarios.Fecha;
-            //FALTAN LOS RADIO BUTTON
         }
 
         public Usuarios LlenaClase()
@@ -53,7 +52,6 @@ namespace ProyectoFinal.UI.Registros
                 ConfirmarClave = ConfirmarClavemetroTextBox.Text,
                 Fecha = FechametroDateTime.Value,
                 NivelUsuario = (UsuarioNormalradioButton.Checked) ? "Normal" : "Administrador"
-               // NivelUsuario
             };
             return usuarios;
         }
@@ -85,9 +83,11 @@ namespace ProyectoFinal.UI.Registros
                 errorProvider.SetError(ClavemetroTextBox, "La Clave no puede estar vacia, Llenar Clave");
                 validar = false;
             }
-
-            //VALIDAR LOS RADIO BUTTON
-
+            if (string.IsNullOrEmpty(ConfirmarClavemetroTextBox.Text))
+            {
+                errorProvider.SetError(ConfirmarClavemetroTextBox, "Debe Confirmar su Clave, Llenar Clave");
+                validar = false;
+            }
             return validar;
         }
 
