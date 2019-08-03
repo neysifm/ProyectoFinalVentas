@@ -22,19 +22,16 @@ namespace ProyectoFinal
             if(loginForm == null)
             {
                 loginForm = new LoginForm();
-
             }
             return loginForm;
         }
 
         public static bool ValidarAdministrador()
         {
-
             if (usuario == null || usuario.NivelUsuario != "Administrador")
             {
-                LoginInfo.DenegarPermiso();
+                DenegarPermiso();
                 return false;
-
             }
             else
             {
