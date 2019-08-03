@@ -24,6 +24,7 @@ namespace ProyectoFinal.UI.Registros
             IDnumericUpDown.Value = 0;
             NombremetroTextBox.Clear();
             ClavemetroTextBox.Clear();
+            FechametroDateTime.Value = DateTime.Now;
             UsuarioNormalradioButton.Checked = false;
             UsuarioAdministradorradioButton.Checked = false;
         }
@@ -33,6 +34,7 @@ namespace ProyectoFinal.UI.Registros
             IDnumericUpDown.Value = usuarios.UsuarioId;
             NombremetroTextBox.Text = usuarios.Nombre;
             ClavemetroTextBox.Text = usuarios.Clave;
+            FechametroDateTime.Value = usuarios.Fecha;
             //FALTAN LOS RADIO BUTTON
         }
 
@@ -43,6 +45,7 @@ namespace ProyectoFinal.UI.Registros
                 UsuarioId = Convert.ToInt32(IDnumericUpDown.Value),
                 Nombre = NombremetroTextBox.Text,
                 Clave = ClavemetroTextBox.Text,
+                Fecha = FechametroDateTime.Value,
                // NivelUsuario
             };
             return usuarios;

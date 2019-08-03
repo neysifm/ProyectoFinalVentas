@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaCategorias));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.FechacheckBox = new System.Windows.Forms.CheckBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.DesdemetroDateTime = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.HastametroDateTime = new MetroFramework.Controls.MetroDateTime();
             this.ImprimirmetroButton = new MetroFramework.Controls.MetroButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
             this.BuscarmetroButton = new MetroFramework.Controls.MetroButton();
             this.FiltrometroComboBox = new MetroFramework.Controls.MetroComboBox();
             this.CriteriometroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.FechacheckBox);
             this.groupBox1.Controls.Add(this.metroLabel1);
             this.groupBox1.Controls.Add(this.DesdemetroDateTime);
             this.groupBox1.Controls.Add(this.metroLabel2);
@@ -59,16 +59,16 @@
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             // 
-            // checkBox1
+            // FechacheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(0, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(105, 18);
-            this.checkBox1.TabIndex = 22;
-            this.checkBox1.Text = "Filtrar Por Fecha";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.FechacheckBox.AutoSize = true;
+            this.FechacheckBox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechacheckBox.Location = new System.Drawing.Point(0, 0);
+            this.FechacheckBox.Name = "FechacheckBox";
+            this.FechacheckBox.Size = new System.Drawing.Size(105, 18);
+            this.FechacheckBox.TabIndex = 22;
+            this.FechacheckBox.Text = "Filtrar Por Fecha";
+            this.FechacheckBox.UseVisualStyleBackColor = true;
             // 
             // metroLabel1
             // 
@@ -116,13 +116,13 @@
             this.ImprimirmetroButton.TabIndex = 38;
             this.ImprimirmetroButton.UseSelectable = true;
             // 
-            // dataGridView1
+            // ConsultadataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 130);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(888, 288);
-            this.dataGridView1.TabIndex = 37;
+            this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsultadataGridView.Location = new System.Drawing.Point(23, 130);
+            this.ConsultadataGridView.Name = "ConsultadataGridView";
+            this.ConsultadataGridView.Size = new System.Drawing.Size(888, 288);
+            this.ConsultadataGridView.TabIndex = 37;
             // 
             // BuscarmetroButton
             // 
@@ -150,9 +150,9 @@
             // 
             // 
             this.CriteriometroTextBox.CustomButton.Image = null;
-            this.CriteriometroTextBox.CustomButton.Location = new System.Drawing.Point(129, 1);
+            this.CriteriometroTextBox.CustomButton.Location = new System.Drawing.Point(151, 1);
             this.CriteriometroTextBox.CustomButton.Name = "";
-            this.CriteriometroTextBox.CustomButton.Size = new System.Drawing.Size(18, 17);
+            this.CriteriometroTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.CriteriometroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.CriteriometroTextBox.CustomButton.TabIndex = 1;
             this.CriteriometroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -199,7 +199,7 @@
             this.ClientSize = new System.Drawing.Size(933, 510);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ImprimirmetroButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ConsultadataGridView);
             this.Controls.Add(this.BuscarmetroButton);
             this.Controls.Add(this.FiltrometroComboBox);
             this.Controls.Add(this.CriteriometroTextBox);
@@ -210,7 +210,7 @@
             this.Text = "CONSULTA DE CATEGORIAS";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,13 +219,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox FechacheckBox;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroDateTime DesdemetroDateTime;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroDateTime HastametroDateTime;
         private MetroFramework.Controls.MetroButton ImprimirmetroButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ConsultadataGridView;
         private MetroFramework.Controls.MetroButton BuscarmetroButton;
         private MetroFramework.Controls.MetroComboBox FiltrometroComboBox;
         private MetroFramework.Controls.MetroTextBox CriteriometroTextBox;

@@ -11,17 +11,12 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal
 {
-    public partial class Login : MetroFramework.Forms.MetroForm
+    public partial class LoginForm : MetroFramework.Forms.MetroForm
     {
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            RegistroUsuarios RegUsu = new RegistroUsuarios();
-            RegUsu.ShowDialog();
-        }
     }
 }

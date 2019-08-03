@@ -46,6 +46,10 @@
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.NivelUsuariogroupBox = new System.Windows.Forms.GroupBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.FechametroDateTime = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -67,7 +71,7 @@
             // 
             this.EliminarmetroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarmetroButton.BackgroundImage")));
             this.EliminarmetroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EliminarmetroButton.Location = new System.Drawing.Point(297, 313);
+            this.EliminarmetroButton.Location = new System.Drawing.Point(297, 342);
             this.EliminarmetroButton.Name = "EliminarmetroButton";
             this.EliminarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.EliminarmetroButton.TabIndex = 39;
@@ -78,7 +82,7 @@
             // 
             this.NuevometroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NuevometroButton.BackgroundImage")));
             this.NuevometroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.NuevometroButton.Location = new System.Drawing.Point(57, 313);
+            this.NuevometroButton.Location = new System.Drawing.Point(57, 342);
             this.NuevometroButton.Name = "NuevometroButton";
             this.NuevometroButton.Size = new System.Drawing.Size(75, 31);
             this.NuevometroButton.TabIndex = 38;
@@ -89,7 +93,7 @@
             // 
             this.GuardarmetroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GuardarmetroButton.BackgroundImage")));
             this.GuardarmetroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.GuardarmetroButton.Location = new System.Drawing.Point(180, 313);
+            this.GuardarmetroButton.Location = new System.Drawing.Point(180, 342);
             this.GuardarmetroButton.Name = "GuardarmetroButton";
             this.GuardarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.GuardarmetroButton.TabIndex = 40;
@@ -100,9 +104,9 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(378, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(387, 85);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 259);
+            this.pictureBox1.Size = new System.Drawing.Size(264, 288);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 37;
             this.pictureBox1.TabStop = false;
@@ -110,7 +114,7 @@
             // UsuarioAdministradorradioButton
             // 
             this.UsuarioAdministradorradioButton.AutoSize = true;
-            this.UsuarioAdministradorradioButton.Location = new System.Drawing.Point(121, 19);
+            this.UsuarioAdministradorradioButton.Location = new System.Drawing.Point(132, 12);
             this.UsuarioAdministradorradioButton.Name = "UsuarioAdministradorradioButton";
             this.UsuarioAdministradorradioButton.Size = new System.Drawing.Size(88, 17);
             this.UsuarioAdministradorradioButton.TabIndex = 36;
@@ -121,7 +125,7 @@
             // UsuarioNormalradioButton
             // 
             this.UsuarioNormalradioButton.AutoSize = true;
-            this.UsuarioNormalradioButton.Location = new System.Drawing.Point(18, 19);
+            this.UsuarioNormalradioButton.Location = new System.Drawing.Point(6, 12);
             this.UsuarioNormalradioButton.Name = "UsuarioNormalradioButton";
             this.UsuarioNormalradioButton.Size = new System.Drawing.Size(97, 17);
             this.UsuarioNormalradioButton.TabIndex = 35;
@@ -193,7 +197,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(43, 251);
+            this.metroLabel4.Location = new System.Drawing.Point(43, 262);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(89, 19);
             this.metroLabel4.TabIndex = 32;
@@ -241,17 +245,78 @@
             // 
             this.NivelUsuariogroupBox.Controls.Add(this.UsuarioNormalradioButton);
             this.NivelUsuariogroupBox.Controls.Add(this.UsuarioAdministradorradioButton);
-            this.NivelUsuariogroupBox.Location = new System.Drawing.Point(146, 219);
+            this.NivelUsuariogroupBox.Location = new System.Drawing.Point(146, 248);
             this.NivelUsuariogroupBox.Name = "NivelUsuariogroupBox";
-            this.NivelUsuariogroupBox.Size = new System.Drawing.Size(226, 51);
+            this.NivelUsuariogroupBox.Size = new System.Drawing.Size(226, 34);
             this.NivelUsuariogroupBox.TabIndex = 44;
             this.NivelUsuariogroupBox.TabStop = false;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(39, 223);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(108, 19);
+            this.metroLabel5.TabIndex = 45;
+            this.metroLabel5.Text = "Confirmar Clave:";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(43, 302);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(93, 19);
+            this.metroLabel6.TabIndex = 46;
+            this.metroLabel6.Text = "Fecha Ingreso:";
+            // 
+            // metroTextBox1
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(204, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(146, 219);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(226, 23);
+            this.metroTextBox1.TabIndex = 47;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // FechametroDateTime
+            // 
+            this.FechametroDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechametroDateTime.Location = new System.Drawing.Point(146, 292);
+            this.FechametroDateTime.MinimumSize = new System.Drawing.Size(0, 29);
+            this.FechametroDateTime.Name = "FechametroDateTime";
+            this.FechametroDateTime.Size = new System.Drawing.Size(226, 29);
+            this.FechametroDateTime.TabIndex = 48;
             // 
             // RegistroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 388);
+            this.ClientSize = new System.Drawing.Size(663, 404);
+            this.Controls.Add(this.FechametroDateTime);
+            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.NivelUsuariogroupBox);
             this.Controls.Add(this.BuscarmetroButton);
             this.Controls.Add(this.EliminarmetroButton);
@@ -295,5 +360,9 @@
         private System.Windows.Forms.NumericUpDown IDnumericUpDown;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.GroupBox NivelUsuariogroupBox;
+        private MetroFramework.Controls.MetroDateTime FechametroDateTime;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }

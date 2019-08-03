@@ -53,43 +53,38 @@ namespace ProyectoFinal.UI.Consultas
                 }
             }
             else
-                dataGridView1.DataSource = listado;
-        }
-
-        private void FechacheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            Buscar();
-        }
-
-        private void CriteriotextBox_TextChanged(object sender, EventArgs e)
-        {
-            Buscar();
-        }
-
-        private void DesdedateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            Buscar();
-        }
-
-        private void HastadateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            Buscar();
-        }
-
-        private void FiltrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (FiltrometroComboBox.SelectedIndex == 4)
             {
-                checkBox1.Checked = false;
-                checkBox1.Enabled = false;
+                listado = db.GetList(p => true);
             }
-            else
-                checkBox1.Enabled = true;
+            if (FechacheckBox.Checked)
+            {
+                listado = listado.Where(U => U.Fecha >= DesdemetroDateTime.Value.Date && U.Fecha <= HastametroDateTime.Value.AddDays(1).Date).ToList();
+            }
 
+            ConsultadataGridView.DataSource = listado;
+        }
+
+        private void DesdemetroDateTime_ValueChanged(object sender, EventArgs e)
+        {
             Buscar();
         }
 
-        private void Buscarbutton_Click_1(object sender, EventArgs e)
+        private void HastametroDateTime_ValueChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void FiltrometroComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void CriteriometroTextBox_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
         {
             Buscar();
         }
