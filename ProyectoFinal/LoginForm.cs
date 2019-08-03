@@ -20,11 +20,6 @@ namespace ProyectoFinal
             InitializeComponent();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Btnlogin_Click(object sender, EventArgs e)
         {
             string usuario = txtuser.Text;
@@ -40,15 +35,14 @@ namespace ProyectoFinal
           
                 frm.Show();
                 this.Hide();
-            }else
-            {
-                MessageBox.Show("Credenciales Incorrectos");
             }
-            
-
+            else
+            {
+                MessageBox.Show("Datos Incorrectos", "Usuario o Contraseña Incorreta, Intentelo de nuevo!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private bool verificarClick()
+        private bool VerificarClick()
         {
             if(txtuser.Text.Length > 0 && txtClave.Text.Length > 0)
             {
@@ -59,11 +53,12 @@ namespace ProyectoFinal
 
         private void Txtuser_TextChanged(object sender, EventArgs e)
         {
-            if(verificarClick())
+            if(VerificarClick())
             {
                 this.btnlogin.Enabled = true;
                 this.btnlogin.BackColor = Color.RoyalBlue;
-            } else
+            }
+            else
             {
                 this.btnlogin.Enabled = false;
                 this.btnlogin.BackColor = Color.Gray;
@@ -72,7 +67,7 @@ namespace ProyectoFinal
 
         private void TxtClave_TextChanged(object sender, EventArgs e)
         {
-            if (verificarClick())
+            if (VerificarClick())
             {
                 this.btnlogin.Enabled = true;
                 this.btnlogin.BackColor = Color.RoyalBlue;
