@@ -1,13 +1,7 @@
 ﻿using BLL;
 using Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoFinal.UI.Registros
@@ -15,7 +9,7 @@ namespace ProyectoFinal.UI.Registros
     public partial class RegistroUsuarios : MetroFramework.Forms.MetroForm, IFormularioRegistros<Usuarios>
     {
         private bool claveValida = false;
-        
+
 
         public RegistroUsuarios()
         {
@@ -202,11 +196,12 @@ namespace ProyectoFinal.UI.Registros
         {
             string clave = ClavemetroTextBox.Text;
             string confirmacion = ConfirmarClavemetroTextBox.Text;
-            if(confirmacion.Equals(clave) && (!string.IsNullOrEmpty(clave) || !string.IsNullOrWhiteSpace(clave)))
+            if (confirmacion.Equals(clave) && (!string.IsNullOrEmpty(clave) || !string.IsNullOrWhiteSpace(clave)))
             {
                 this.buttonVerificacion.BackColor = Color.Green;
                 claveValida = true;
-            } else
+            }
+            else
             {
                 claveValida = false;
                 this.buttonVerificacion.BackColor = Color.Orange;

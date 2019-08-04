@@ -2,12 +2,6 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoFinal.UI.Registros
@@ -223,7 +217,7 @@ namespace ProyectoFinal.UI.Registros
         }
         List<Productos> listaVentas = new List<Productos>();
         List<int> listaPrecios = new List<int>();
-        
+
 
         private void AgregarProductometroButton_Click(object sender, EventArgs e)
         {
@@ -233,7 +227,7 @@ namespace ProyectoFinal.UI.Registros
             listaVentas.Add(producto);
             listaPrecios.Add(cantidad);
             ActualizarGrid();
-            
+
         }
 
         private void ActualizarGrid()
@@ -246,10 +240,10 @@ namespace ProyectoFinal.UI.Registros
 
         private void ActualizarMonto()
         {
-               
+
             decimal monto = 0;
             int i = 0;
-            
+
             foreach (var item in listaVentas)
             {
                 int cantidad = listaPrecios[i++];

@@ -1,9 +1,4 @@
 ﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoFinal
@@ -19,7 +14,7 @@ namespace ProyectoFinal
 
         public static LoginForm GetLoginForm()
         {
-            if(loginForm == null)
+            if (loginForm == null)
             {
                 loginForm = new LoginForm();
             }

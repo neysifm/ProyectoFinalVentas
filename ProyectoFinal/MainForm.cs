@@ -1,14 +1,6 @@
 ﻿using ProyectoFinal.UI.Consultas;
 using ProyectoFinal.UI.Registros;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProyectoFinal
 {
@@ -17,11 +9,11 @@ namespace ProyectoFinal
         public MainForm()
         {
             InitializeComponent();
-            statusLabelUsuario.Text = LoginInfo.usuario.Nombre;         
+            statusLabelUsuario.Text = LoginInfo.usuario.Nombre;
         }
 
         private void RegistroDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {        
+        {
             RegistroUsuarios RegUsu = new RegistroUsuarios();
             RegUsu.ShowDialog();
         }
@@ -92,7 +84,7 @@ namespace ProyectoFinal
         }
 
         private void CerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
-        {         
+        {
             LoginInfo.usuario = null;
             LoginInfo.GetLoginForm().Show();
             this.Close();

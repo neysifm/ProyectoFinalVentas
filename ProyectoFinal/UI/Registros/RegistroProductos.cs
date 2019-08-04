@@ -1,13 +1,6 @@
 ﻿using BLL;
 using Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoFinal.UI.Registros
@@ -56,14 +49,14 @@ namespace ProyectoFinal.UI.Registros
             Productos productos = new Productos();
 
             productos.ProductoId = Convert.ToInt32(IDProductonumericUpDown.Value);
-                productos.Nombre = NombremetroTextBox.Text;
-                productos.Descripcion = DescripcionProductometroTextBox.Text;
-                productos.ITBIS = Convert.ToInt32(ITBISnumericUpDown.Value);
-                productos.Costo = Convert.ToInt32(CostonumericUpDown.Value);
-                productos.Precio = Convert.ToInt32(PrecionumericUpDown.Value);
-                productos.Stock = Convert.ToInt32(StockmetroTextBox.Text);
-                productos.Fecha = FechametroDateTime.Value;
-            
+            productos.Nombre = NombremetroTextBox.Text;
+            productos.Descripcion = DescripcionProductometroTextBox.Text;
+            productos.ITBIS = Convert.ToInt32(ITBISnumericUpDown.Value);
+            productos.Costo = Convert.ToInt32(CostonumericUpDown.Value);
+            productos.Precio = Convert.ToInt32(PrecionumericUpDown.Value);
+            productos.Stock = Convert.ToInt32(StockmetroTextBox.Text);
+            productos.Fecha = FechametroDateTime.Value;
+
             return productos;
         }
 
@@ -102,7 +95,7 @@ namespace ProyectoFinal.UI.Registros
                 errorProvider.SetError(NombremetroTextBox, "El nombre no puede estar vacio, Llenar Nombre");
                 validar = false;
             }
-            return validar; 
+            return validar;
         }
 
         public bool ValidarEliminar()

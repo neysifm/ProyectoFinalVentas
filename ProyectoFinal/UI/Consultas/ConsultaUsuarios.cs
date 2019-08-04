@@ -2,13 +2,8 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ProyectoFinal.UI.Consultas
 {
@@ -44,7 +39,7 @@ namespace ProyectoFinal.UI.Consultas
 
                         case 2://Nombre
                             listado = db.GetList(U => U.Nombre.Contains(CriteriometroTextBox.Text));
-                            break;                    
+                            break;
                     }
                 }
                 catch (Exception)
