@@ -37,7 +37,7 @@
             this.TotalmetroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.EliminarFilametroButton = new MetroFramework.Controls.MetroButton();
-            this.ConsultaProductosdataGridView = new System.Windows.Forms.DataGridView();
+            this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.AgregarProductometroButton = new MetroFramework.Controls.MetroButton();
             this.NombreProductometroTextBox = new MetroFramework.Controls.MetroTextBox();
             this.BuscarProductometroButton = new MetroFramework.Controls.MetroButton();
@@ -68,7 +68,7 @@
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultaProductosdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDProductosnumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -115,7 +115,7 @@
             this.groupBox2.Controls.Add(this.TotalmetroTextBox);
             this.groupBox2.Controls.Add(this.metroLabel3);
             this.groupBox2.Controls.Add(this.EliminarFilametroButton);
-            this.groupBox2.Controls.Add(this.ConsultaProductosdataGridView);
+            this.groupBox2.Controls.Add(this.DetalledataGridView);
             this.groupBox2.Controls.Add(this.AgregarProductometroButton);
             this.groupBox2.Controls.Add(this.NombreProductometroTextBox);
             this.groupBox2.Controls.Add(this.BuscarProductometroButton);
@@ -179,14 +179,15 @@
             this.EliminarFilametroButton.Size = new System.Drawing.Size(75, 23);
             this.EliminarFilametroButton.TabIndex = 22;
             this.EliminarFilametroButton.UseSelectable = true;
+            this.EliminarFilametroButton.Click += new System.EventHandler(this.EliminarFilametroButton_Click);
             // 
-            // ConsultaProductosdataGridView
+            // DetalledataGridView
             // 
-            this.ConsultaProductosdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaProductosdataGridView.Location = new System.Drawing.Point(6, 60);
-            this.ConsultaProductosdataGridView.Name = "ConsultaProductosdataGridView";
-            this.ConsultaProductosdataGridView.Size = new System.Drawing.Size(540, 150);
-            this.ConsultaProductosdataGridView.TabIndex = 20;
+            this.DetalledataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalledataGridView.Location = new System.Drawing.Point(6, 60);
+            this.DetalledataGridView.Name = "DetalledataGridView";
+            this.DetalledataGridView.Size = new System.Drawing.Size(540, 150);
+            this.DetalledataGridView.TabIndex = 20;
             // 
             // AgregarProductometroButton
             // 
@@ -355,7 +356,6 @@
             this.NombreClientemetroTextBox.Size = new System.Drawing.Size(175, 23);
             this.NombreClientemetroTextBox.TabIndex = 18;
             this.NombreClientemetroTextBox.UseSelectable = true;
-            this.NombreClientemetroTextBox.UseSystemPasswordChar = true;
             this.NombreClientemetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.NombreClientemetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -562,7 +562,7 @@
             this.Text = "REGISTRO DE VENTAS";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ConsultaProductosdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDProductosnumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -584,7 +584,7 @@
         private MetroFramework.Controls.MetroTextBox TotalmetroTextBox;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroButton EliminarFilametroButton;
-        private System.Windows.Forms.DataGridView ConsultaProductosdataGridView;
+        private System.Windows.Forms.DataGridView DetalledataGridView;
         private MetroFramework.Controls.MetroButton AgregarProductometroButton;
         private MetroFramework.Controls.MetroTextBox NombreProductometroTextBox;
         private MetroFramework.Controls.MetroButton BuscarProductometroButton;

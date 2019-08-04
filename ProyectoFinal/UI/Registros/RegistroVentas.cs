@@ -8,6 +8,7 @@ namespace ProyectoFinal.UI.Registros
 {
     public partial class RegistroVentas : MetroFramework.Forms.MetroForm, IFormularioRegistros<Ventas>
     {
+        private List<DetalleVentas> DetalleVenta;
         public RegistroVentas()
         {
             InitializeComponent();
@@ -232,9 +233,9 @@ namespace ProyectoFinal.UI.Registros
 
         private void ActualizarGrid()
         {
-            this.ConsultaProductosdataGridView.DataSource = null;
-            this.ConsultaProductosdataGridView.DataSource = listaVentas;
-            this.ConsultaProductosdataGridView.Update();
+            this.DetalledataGridView.DataSource = null;
+            this.DetalledataGridView.DataSource = listaVentas;
+            this.DetalledataGridView.Update();
             ActualizarMonto();
         }
 
@@ -252,6 +253,31 @@ namespace ProyectoFinal.UI.Registros
 
             this.MontometroTextBox.Text = monto.ToString();
             this.TotalmetroTextBox.Text = monto.ToString();
+        }
+
+        private void CargarGrid()
+        {
+            DetalledataGridView.DataSource = null;
+        }
+
+        private void EliminarFilametroButton_Click(object sender, EventArgs e)
+        {
+            errorProvider.Clear();
+            try
+            {
+                if (DetalleVenta.Count > 0)
+                {
+                    DetalleVenta.RemoveAt(DetalledataGridView.CurrentRow.Index);
+                    ActualizarGrid();
+                    CargarGrid();
+                    ActualizarMonto();
+                }
+                else
+                {
+                    errorProvider.SetError(DetalledataGridView, "Debe haber productos en la lista para eliminar");
+                }
+            }
+            catch (Exception) { }
         }
     }
 }
