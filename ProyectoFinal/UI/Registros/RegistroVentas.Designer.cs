@@ -150,6 +150,7 @@
             this.TotalmetroTextBox.MaxLength = 32767;
             this.TotalmetroTextBox.Name = "TotalmetroTextBox";
             this.TotalmetroTextBox.PasswordChar = '\0';
+            this.TotalmetroTextBox.ReadOnly = true;
             this.TotalmetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TotalmetroTextBox.SelectedText = "";
             this.TotalmetroTextBox.SelectionLength = 0;

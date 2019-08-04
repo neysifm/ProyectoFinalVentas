@@ -344,6 +344,7 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.IDnumericUpDown);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroUsuarios";
             this.Text = "REGISTRO DE USUARIOS";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
