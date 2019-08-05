@@ -116,10 +116,34 @@
     <Compile Include="UI\Consultas\ConsultaVentas.Designer.cs">
       <DependentUpon>ConsultaVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\Reportes\CategoriaReports.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategoriaReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\Reportes\ClienteReports.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClienteReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\Reportes\ProductoReports.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductoReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Consultas\Reportes\UsuarioReports.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UsuarioReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\Reportes\VentaReports.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentaReports.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\Registros\RegistroCategorias.cs">
@@ -185,9 +209,25 @@
     <EmbeddedResource Include="UI\Consultas\ConsultaVentas.resx">
       <DependentUpon>ConsultaVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\Reportes\CategoriaReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CategoriaReports.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\Reportes\ClienteReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClienteReports.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\Reportes\ProductoReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductoReports.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\Reportes\UsuarioReports.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>UsuarioReports.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\Reportes\VentaReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VentaReports.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroCategorias.resx">
       <DependentUpon>RegistroCategorias.cs</DependentUpon>
