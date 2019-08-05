@@ -22,5 +22,17 @@ El sistema de venta VENSIS, permitirá la automatización en los procesos de con
 que conlleva a mejorar la gestión del negocio para la toma de decisiones.
 
 # LOGIN (Ventana de Inicio de Sesión)
-![loginn](https://user-images.githubusercontent.com/39573906/62433213-7e1a1680-b701-11e9-856f-aa09b96afb3e.PNG)
 
+Este es nuestro Ventana Login para Iniciar Sesión en nuestra aplicacion.
+Aqui podran Acceder tanto Usuarios Normales como administradores. 
+Cabe destacar que solo los Usuarios Administradores
+podran Registrar Usuarios y hacer ciertas modificaciones en la Aplicacion.
+
++ ![loginn](https://user-images.githubusercontent.com/39573906/62433213-7e1a1680-b701-11e9-856f-aa09b96afb3e.PNG)
+
+
+# Registros del Sistema de Ventas
+
+En nuestra Aplicacion se podran Registrar:
+- Usuarios
+- Clientes
