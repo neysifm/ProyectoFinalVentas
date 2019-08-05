@@ -23,7 +23,7 @@ que conlleva a mejorar la gestión del negocio para la toma de decisiones.
 
 # LOGIN (Ventana de Inicio de Sesión)
 
-Este es nuestro Ventana Login para Iniciar Sesión en nuestra aplicacion.
+Este es nuestra Ventana Login para Iniciar Sesión en nuestra aplicacion.
 Aqui podran Acceder tanto Usuarios Normales como administradores. 
 Cabe destacar que solo los Usuarios Administradores
 podran Registrar Usuarios y hacer ciertas modificaciones en la Aplicacion.
@@ -36,3 +36,6 @@ podran Registrar Usuarios y hacer ciertas modificaciones en la Aplicacion.
 En nuestra Aplicacion se podran Registrar:
 - Usuarios
 - Clientes
+- Productos
+- Categorias de Productos
+- Ventas
