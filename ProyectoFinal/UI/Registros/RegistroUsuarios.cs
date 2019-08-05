@@ -25,6 +25,7 @@ namespace ProyectoFinal.UI.Registros
             FechametroDateTime.Value = DateTime.Now;
             UsuarioNormalradioButton.Checked = true;
             UsuarioAdministradorradioButton.Checked = false;
+            habilitarBotones(true);
         }
 
         public void LlenaCampos(Usuarios usuarios)
@@ -114,11 +115,19 @@ namespace ProyectoFinal.UI.Registros
             {
                 Usuarios usuarios = new RepositorioBase<Usuarios>().Buscar(Convert.ToInt32(IDnumericUpDown.Value));
                 LlenaCampos(usuarios);
+                habilitarBotones(false);
             }
             else
             {
                 MessageBox.Show("No se encontro el usuario", "Debe Registrarse!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void habilitarBotones(bool estado)
+        {
+            IDnumericUpDown.Enabled = estado;
+            ClavemetroTextBox.Enabled = estado;
+            ConfirmarClavemetroTextBox.Enabled = estado;
         }
 
         private void NuevometroButton_Click(object sender, EventArgs e)

@@ -24,6 +24,7 @@ namespace ProyectoFinal.UI.Registros
             //StockmetroTextBox.Clear();
             FechametroDateTime.Value = DateTime.Now;
             DescripcionCategoriametroTextBox.Clear();
+            habilitarBotones(true);
         }
 
         public void LlenaCampos(Productos productos)
@@ -127,11 +128,18 @@ namespace ProyectoFinal.UI.Registros
             {
                 Productos productos = new RepositorioBase<Productos>().Buscar(Convert.ToInt32(IDProductonumericUpDown.Value));
                 LlenaCampos(productos);
+                habilitarBotones(false);
             }
             else
             {
                 MessageBox.Show("No se encontro el Producto", "Debe Registrarlo!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void habilitarBotones(bool estado)
+        {
+            IDProductonumericUpDown.Enabled = estado;
+
         }
 
         private void BuscarCategoriametroButton_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +51,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabelUsuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelNivel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelFecha = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -232,7 +236,9 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLabelUsuario});
+            this.statusLabelUsuario,
+            this.toolStripStatusLabelNivel,
+            this.toolStripStatusLabelFecha});
             this.statusStrip1.Location = new System.Drawing.Point(23, 530);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(918, 22);
@@ -244,6 +250,23 @@
             this.statusLabelUsuario.Name = "statusLabelUsuario";
             this.statusLabelUsuario.Size = new System.Drawing.Size(106, 17);
             this.statusLabelUsuario.Text = "statusLabelUsuario";
+            // 
+            // toolStripStatusLabelNivel
+            // 
+            this.toolStripStatusLabelNivel.Name = "toolStripStatusLabelNivel";
+            this.toolStripStatusLabelNivel.Size = new System.Drawing.Size(139, 17);
+            this.toolStripStatusLabelNivel.Text = "toolStripStatusLabelNivel";
+            // 
+            // toolStripStatusLabelFecha
+            // 
+            this.toolStripStatusLabelFecha.Name = "toolStripStatusLabelFecha";
+            this.toolStripStatusLabelFecha.Size = new System.Drawing.Size(0, 17);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1001;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // MainForm
             // 
@@ -261,6 +284,7 @@
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 20);
             this.Text = "SISTEMA DE VENTAS";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -294,6 +318,9 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel statusLabelUsuario;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNivel;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelFecha;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

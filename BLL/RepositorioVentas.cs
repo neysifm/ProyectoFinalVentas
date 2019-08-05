@@ -32,7 +32,7 @@ namespace BLL
             foreach (var tem in entity.DetalleVenta)
             {
                 Clientes cliente = contextoCliente.Buscar(entity.ClienteId);
-                cliente.Balance -= entity.Total;
+                cliente.Balance -= tem.Subtotal;
                 contextoCliente.Modificar(cliente);
             }
             try

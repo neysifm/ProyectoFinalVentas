@@ -117,6 +117,7 @@
             this.ImprimirmetroButton.Size = new System.Drawing.Size(105, 53);
             this.ImprimirmetroButton.TabIndex = 46;
             this.ImprimirmetroButton.UseSelectable = true;
+            this.ImprimirmetroButton.Click += new System.EventHandler(this.ImprimirmetroButton_Click);
             // 
             // ConsultadataGridView
             // 

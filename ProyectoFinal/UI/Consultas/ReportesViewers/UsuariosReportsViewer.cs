@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using ProyectoFinal.UI.Consultas.Reportes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,15 @@ namespace ProyectoFinal.UI.Consultas.ReportesViewers
 {
     public partial class UsuariosReportsViewer : MetroFramework.Forms.MetroForm
     {
-        public UsuariosReportsViewer()
+        private List<Usuarios> listado;
+        public UsuariosReportsViewer(List<Usuarios> listados)
         {
             InitializeComponent();
+            this.listado = listados;
+            UsuarioReports reporte = new UsuarioReports();
+            reporte.SetDataSource(listado);
+            MycrystalReportViewer.ReportSource = reporte;
+            MycrystalReportViewer.Refresh();
         }
-
     }
 }

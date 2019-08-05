@@ -10,6 +10,7 @@ namespace ProyectoFinal
         {
             InitializeComponent();
             statusLabelUsuario.Text = LoginInfo.usuario.Nombre;
+            toolStripStatusLabelNivel.Text = LoginInfo.usuario.NivelUsuario;
         }
 
         private void RegistroDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -88,6 +89,17 @@ namespace ProyectoFinal
             LoginInfo.usuario = null;
             LoginInfo.GetLoginForm().Show();
             this.Close();
+        }
+
+        private void MainForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            LoginInfo.GetLoginForm().Show();
+            
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabelFecha.Text = DateTime.Today.ToLongDateString();
         }
     }
 }

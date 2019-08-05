@@ -9,6 +9,8 @@ namespace Entidades.Views
     public class ProductosView
     {
         public int IdProducto { get; set; }
+        public int CategoriaId { get; set; }
+        public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public decimal Cantidad { get; set; }
         public decimal Precio { get; set; }
@@ -17,7 +19,9 @@ namespace Entidades.Views
         public ProductosView()
         {
             IdProducto = 0;
-            Descripcion = string.Empty;
+            CategoriaId = 0;
+            Nombre = String.Empty;
+            Descripcion = String.Empty;
             Cantidad = 0;
             Precio = 0;
             SubTotal = 0;

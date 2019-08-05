@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.MycrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // crystalReportViewer1
+            // MycrystalReportViewer
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(20, 60);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(783, 420);
-            this.crystalReportViewer1.TabIndex = 0;
+            this.MycrystalReportViewer.ActiveViewIndex = -1;
+            this.MycrystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MycrystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MycrystalReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MycrystalReportViewer.Location = new System.Drawing.Point(20, 60);
+            this.MycrystalReportViewer.Name = "MycrystalReportViewer";
+            this.MycrystalReportViewer.Size = new System.Drawing.Size(783, 420);
+            this.MycrystalReportViewer.TabIndex = 0;
             // 
             // VentasReportsViewers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 500);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.Controls.Add(this.MycrystalReportViewer);
             this.Name = "VentasReportsViewers";
             this.Text = "Reporte de Ventas";
             this.ResumeLayout(false);
@@ -56,6 +56,6 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer MycrystalReportViewer;
     }
 }
