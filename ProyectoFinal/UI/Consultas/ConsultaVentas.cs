@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinal.UI.Consultas.ReportesViewers;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -78,6 +79,12 @@ namespace ProyectoFinal.UI.Consultas
         private void BuscarmetroButton_Click(object sender, EventArgs e)
         {
             Buscar();
+        }
+
+        private void ImprimirmetroButton_Click(object sender, EventArgs e)
+        {
+            VentasReportsViewers reporte = new VentasReportsViewers(listado);
+            reporte.ShowDialog();
         }
     }
 }
