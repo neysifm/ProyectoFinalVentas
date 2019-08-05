@@ -1,5 +1,5 @@
 # Proyecto Final de Ventas (VENSIS)
-Proyecto Final Programacion Aplicada 1 UCNE 2-2019
+ Proyecto Final Programacion Aplicada 1 UCNE 2-2019
 
                                                     DESCRIPCIÓN PROYECTO FINAL
 El presente proyecto se orienta al análisis y diseño de un sistema para el control de ventas y manejo de negocio (VENSIS), 
@@ -22,5 +22,5 @@ El sistema de venta VENSIS, permitirá la automatización en los procesos de con
 que conlleva a mejorar la gestión del negocio para la toma de decisiones.
 
 # LOGIN (Ventana de Inicio de Sesión)
-
+![loginn](https://user-images.githubusercontent.com/39573906/62433213-7e1a1680-b701-11e9-856f-aa09b96afb3e.PNG)
 
