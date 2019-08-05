@@ -51,12 +51,22 @@ En esta Aplicacion se podran Registrar:
 
 # Consultas del Sistema de Ventas
 En esta Aplicacion se podran Hacer Consultas de:
+## Usuarios
++ 
+## Clientes
++ 
+## Productos
++ 
+## Categorias de Productos
++ 
+## Ventas de Productos
++ 
 
 # Pre-Requisitos Para Uso de este Sistema
-• Windows 10, 64 bits.
-• Procesador: Procesador a 2.4 GHz o más rápido.
-• Memoria RAM: 4 gigabyte (GB).
-• Espacio en disco duro: 250gigabyte (GB) o más.
+- Windows 10, 64 bits.
+- Procesador: Procesador a 2.4 GHz o más rápido.
+- Memoria RAM: 4 gigabyte (GB).
+- Espacio en disco duro: 250gigabyte (GB) o más.
 
 # Herramientas Utilizadas para la Evaloracion de este Sistema
 - Microsoft Visual Studio.
@@ -66,6 +76,7 @@ En esta Aplicacion se podran Hacer Consultas de:
 
 # Autor(a) del Proyecto
 - Neysi Alexandra Fermin Minaya. 
+
 # Licencia de Uso
 - Este proyecto es de Codigo Abierto y fue dise;ado como pre-requisito de evaluacion para la asignatura de
   Programacion Aplicada 1 de la Universidad Catolica Nordestana (UCNE).
