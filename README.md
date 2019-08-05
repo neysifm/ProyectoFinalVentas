@@ -37,7 +37,7 @@ Una vez Iniciada Nuestra Sesión, Vemos el menu Principal de nuestro Sistema de 
 
 # Registros del Sistema de Ventas
 
-En nuestra Aplicacion se podran Registrar:
+En esta Aplicacion se podran Registrar:
 ## Usuarios
 + ![Registrousuario](https://user-images.githubusercontent.com/39573906/62433678-69d71900-b703-11e9-8bf2-392aabf24eef.PNG)
 ## Clientes
@@ -50,21 +50,24 @@ En nuestra Aplicacion se podran Registrar:
 + ![Registro Venta Detalle](https://user-images.githubusercontent.com/39573906/62433709-8c693200-b703-11e9-8fca-013373ad5bdb.PNG)
 
 # Consultas del Sistema de Ventas
-
-# Reportes del Sistema de Ventas
+En esta Aplicacion se podran Hacer Consultas de:
 
 # Pre-Requisitos Para Uso de este Sistema
+• Windows 10, 64 bits.
+• Procesador: Procesador a 2.4 GHz o más rápido.
+• Memoria RAM: 4 gigabyte (GB).
+• Espacio en disco duro: 250gigabyte (GB) o más.
 
 # Herramientas Utilizadas para la Evaloracion de este Sistema
-- Microsoft Visual Studio
-- Lenguaje C#
-- Manejador de Base de Datos SQL Server 2017
-- Como diseñador para interfaces Pencil y Pintere
+- Microsoft Visual Studio.
+- Lenguaje C#.
+- Manejador de Base de Datos SQL Server 2017.
+- Como diseñador para interfaces Pencil y Pinterest.
 
 # Autor(a) del Proyecto
-- Neysi Alexandra Fermin Minaya 
+- Neysi Alexandra Fermin Minaya. 
 # Licencia de Uso
-Este proyecto es de Codigo Abierto y fue dise;ado como pre-requisito de evaluacion para la asignatura de
-Programacion Aplicada 1 de la Universidad Catolica Nordestana (UCNE).
+- Este proyecto es de Codigo Abierto y fue dise;ado como pre-requisito de evaluacion para la asignatura de
+  Programacion Aplicada 1 de la Universidad Catolica Nordestana (UCNE).
 
 
