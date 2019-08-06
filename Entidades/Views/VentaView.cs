@@ -10,18 +10,16 @@ namespace Entidades.Views
     {
         public int IdVenta { get; set; }
         public string Nombre { get; set; }
-        public string Expr1 { get; set; }
+        public string Producto { get; set; }
         public DateTime Fecha { get; set; }
-        public DateTime HastaFecha { get; set; }
         public decimal Total { get; set; }
 
         public VentaView()
         {
             IdVenta = 0;
             Nombre = string.Empty;
-            Expr1 = string.Empty;
+            Producto = string.Empty;
             Fecha = DateTime.Now;
-            HastaFecha = DateTime.Now;
             Total = 0;
         }
     }

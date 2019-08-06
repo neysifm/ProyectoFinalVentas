@@ -32,14 +32,14 @@ namespace ProyectoFinal.UI.Consultas.ReportesViewers
 
         private void LlenarClase()
         {
-            RepositorioBase<Ventas> dbC = new RepositorioBase<Ventas>();
-            RepositorioBase<Clientes> dbV = new RepositorioBase<Clientes>();
+            RepositorioBase<Ventas> contextoVentas = new RepositorioBase<Ventas>();
+            RepositorioBase<Clientes> contextoClientes = new RepositorioBase<Clientes>();
             lista = new List<VentaView>();
 
             foreach (var item in this.listado)
             {
-                Ventas ventas = dbC.Buscar(item.VentaId);
-                Clientes clientes = dbV.Buscar(item.ClienteId);
+                Ventas ventas = contextoVentas.Buscar(item.VentaId);
+                Clientes clientes = contextoClientes.Buscar(item.ClienteId);
                 lista.Add(new VentaView()
                 {
                     IdVenta = item.VentaId,
