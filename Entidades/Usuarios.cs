@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace Entidades
 {
@@ -31,6 +32,24 @@ namespace Entidades
             ConfirmarClave = String.Empty;
             Fecha = DateTime.Now;
             NivelUsuario = String.Empty;
+        }
+
+        public static string Encriptar(string cadenaEncriptada)
+        {
+            string resultado = string.Empty;
+            byte[] encryted = Encoding.Unicode.GetBytes(cadenaEncriptada);
+            resultado = Convert.ToBase64String(encryted);
+
+            return resultado;
+        }
+
+        public static string DesEncriptar(string cadenaDesencriptada)
+        {
+            string resultado = string.Empty;
+            byte[] decryted = Convert.FromBase64String(cadenaDesencriptada);
+            resultado = System.Text.Encoding.Unicode.GetString(decryted);
+
+            return resultado;
         }
     }
 }

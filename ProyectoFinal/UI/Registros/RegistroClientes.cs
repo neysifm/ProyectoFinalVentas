@@ -161,5 +161,19 @@ namespace ProyectoFinal.UI.Registros
                 MessageBox.Show("Ocurrio un error", "Ups!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void EliminarmetroButton_Click(object sender, EventArgs e)
+        {
+            if (ValidarEliminar())
+            {
+                new RepositorioBase<Clientes>().Eliminar(Convert.ToInt32(IDnumericUpDown.Value));
+                LimpiarCampos();
+                MessageBox.Show("El Registro se Elimino Correctamente!");
+            }
+            else
+            {
+                MessageBox.Show("No se Pudo Eliminar el registro");
+            }
+        }
     }
 }

@@ -9,6 +9,7 @@ namespace ProyectoFinal.UI.Registros
     public partial class RegistroVentas : MetroFramework.Forms.MetroForm, IFormularioRegistros<Ventas>
     {
         List<DetalleVentas> listaVentas = new List<DetalleVentas>();
+        private List<DetalleVentas> Detalles;
         public RegistroVentas()
         {
             InitializeComponent();
@@ -319,25 +320,19 @@ namespace ProyectoFinal.UI.Registros
             this.TotalmetroTextBox.Text = monto.ToString();
         }
 
-        private void CargarGrid()
-        {
-            DetalledataGridView.DataSource = null;
-        }
-
         private void EliminarFilametroButton_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
             try
             {
-                if (listaVentas.Count > 0)
+                if (Detalles.Count > 0)
                 {
                     if (DetalledataGridView.SelectedCells.Count > 0)
                     {
-                        listaVentas.RemoveAt(DetalledataGridView.SelectedCells[0].RowIndex);
+                        Detalles.RemoveAt(DetalledataGridView.CurrentRow.Index);
                         ActualizarGrid();
                         ActualizarMonto();
                     }
-
                 }
                 else
                 {
@@ -351,10 +346,22 @@ namespace ProyectoFinal.UI.Registros
         {
             if (DetalledataGridView.SelectedCells.Count > 0)
             {
-                EliminarFilametroButton.Enabled = true;
+                EliminarFilametroButton.Enabled = false;
             }
         }
 
-
+        private void EliminarmetroButton_Click(object sender, EventArgs e)
+        {
+            if (ValidarEliminar())
+            {
+                new RepositorioBase<Ventas>().Eliminar(Convert.ToInt32(IDnumericUpDown.Value));
+                LimpiarCampos();
+                MessageBox.Show("El Registro se Elimino Correctamente!");
+            }
+            else
+            {
+                MessageBox.Show("No se Pudo Eliminar el registro");
+            }
+        }
     }
 }

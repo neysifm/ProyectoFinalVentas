@@ -21,7 +21,7 @@ namespace ProyectoFinal.UI.Registros
             ITBISnumericUpDown.Value = 0;
             CostonumericUpDown.Value = 0;
             PrecionumericUpDown.Value = 0;
-            //StockmetroTextBox.Clear();
+            StockmetroTextBox.Clear();
             FechametroDateTime.Value = DateTime.Now;
             DescripcionCategoriametroTextBox.Clear();
             habilitarBotones(true);

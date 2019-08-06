@@ -32,8 +32,8 @@ namespace ProyectoFinal.UI.Registros
         {
             IDnumericUpDown.Value = usuarios.UsuarioId;
             NombremetroTextBox.Text = usuarios.Nombre;
-            ClavemetroTextBox.Text = usuarios.Clave;
-            ConfirmarClavemetroTextBox.Text = usuarios.ConfirmarClave;
+            ClavemetroTextBox.Text = Usuarios.DesEncriptar(usuarios.Clave);
+            ConfirmarClavemetroTextBox.Text = Usuarios.DesEncriptar(usuarios.ConfirmarClave);
             FechametroDateTime.Value = usuarios.Fecha;
         }
 
@@ -43,8 +43,8 @@ namespace ProyectoFinal.UI.Registros
             {
                 UsuarioId = Convert.ToInt32(IDnumericUpDown.Value),
                 Nombre = NombremetroTextBox.Text,
-                Clave = ClavemetroTextBox.Text,
-                ConfirmarClave = ConfirmarClavemetroTextBox.Text,
+                Clave = Usuarios.Encriptar(ClavemetroTextBox.Text),
+                ConfirmarClave = Usuarios.Encriptar(ConfirmarClavemetroTextBox.Text),
                 Fecha = FechametroDateTime.Value,
                 NivelUsuario = (UsuarioNormalradioButton.Checked) ? "Normal" : "Administrador"
             };

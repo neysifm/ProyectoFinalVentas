@@ -83,6 +83,7 @@
             this.EliminarmetroButton.Size = new System.Drawing.Size(75, 31);
             this.EliminarmetroButton.TabIndex = 42;
             this.EliminarmetroButton.UseSelectable = true;
+            this.EliminarmetroButton.Click += new System.EventHandler(this.EliminarmetroButton_Click);
             // 
             // NuevometroButton
             // 
