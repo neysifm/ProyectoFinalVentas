@@ -52,15 +52,15 @@ En esta Aplicacion se podran Registrar:
 # Consultas del Sistema de Ventas
 En esta Aplicacion se podran Hacer Consultas de:
 ## Usuarios
-+ 
++ ![ConsultaUsuario](https://user-images.githubusercontent.com/39573906/62499688-977a9b80-b7b1-11e9-9e78-e5bf8d3f83ca.PNG)
 ## Clientes
-+ 
++ ![ConsultaClientes](https://user-images.githubusercontent.com/39573906/62499701-a06b6d00-b7b1-11e9-854e-252ad4024b81.PNG)
 ## Productos
-+ 
++ ![ConsultaProductos](https://user-images.githubusercontent.com/39573906/62499681-9184ba80-b7b1-11e9-9059-1bf1af460f0a.PNG)
 ## Categorias de Productos
-+ 
++ ![ConsultaCategorias](https://user-images.githubusercontent.com/39573906/62499670-86ca2580-b7b1-11e9-9aa7-ff0e7458a960.PNG)
 ## Ventas de Productos
-+ 
++ ![ConsultaVentas](https://user-images.githubusercontent.com/39573906/62499693-9ba6b900-b7b1-11e9-807c-2166f0168d6f.PNG)
 
 # Pre-Requisitos Para Uso de este Sistema
 - Windows 10, 64 bits.
