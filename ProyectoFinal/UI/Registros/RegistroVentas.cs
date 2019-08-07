@@ -9,7 +9,6 @@ namespace ProyectoFinal.UI.Registros
     public partial class RegistroVentas : MetroFramework.Forms.MetroForm, IFormularioRegistros<Ventas>
     {
         List<DetalleVentas> listaVentas = new List<DetalleVentas>();
-        private List<DetalleVentas> Detalles;
         public RegistroVentas()
         {
             InitializeComponent();
@@ -27,12 +26,13 @@ namespace ProyectoFinal.UI.Registros
             ITBISnumericUpDown.Value = 0;
             FechametroDateTime.Value = DateTime.Now;
             NombreProductometroTextBox.Clear();
+            TotalmetroTextBox.Clear();
             CantidadnumericUpDown.Value = CantidadnumericUpDown.Minimum;
             CantidadnumericUpDown.Maximum = 100;
             this.listaVentas = null;
             ActualizarGrid();
             metroTextBoxStock.Clear();
-            habilitarBotones(true);
+            HabilitarBotones(true);
         }
 
         public void LlenaCampos(Ventas ventas)
@@ -53,15 +53,15 @@ namespace ProyectoFinal.UI.Registros
                 this.listaVentas = ventas.DetalleVenta;
                 ActualizarGrid();
             }
-            habilitarBotones(false);
+            HabilitarBotones(false);
         }
 
-        private void habilitarBotones(bool estado)
+        private void HabilitarBotones(bool estado)
         {
             IDnumericUpDown.Enabled = estado;
             IDClientenumericUpDown.Enabled = estado;
             ITBISnumericUpDown.Enabled = estado;
-            IDProductosnumericUpDown.Enabled = estado;
+            //IDProductosnumericUpDown.Enabled = estado;
         }
 
         public void LlenaCamposClientes(Clientes clientes)
@@ -81,10 +81,10 @@ namespace ProyectoFinal.UI.Registros
         public Ventas LlenaClase()
         {
             decimal monto = 0;
-            foreach (DetalleVentas d in listaVentas)
+            foreach (DetalleVentas DeVenta in listaVentas)
             {
-                d.CalularSubTotal();
-                monto += d.Subtotal;
+                DeVenta.CalularSubTotal();
+                monto += DeVenta.Subtotal;
             }
             Ventas ventas = new Ventas()
             {
@@ -153,7 +153,6 @@ namespace ProyectoFinal.UI.Registros
                 validar = false;
             }
             return validar;
-
         }
 
         public bool ValidarEliminar()
@@ -193,11 +192,10 @@ namespace ProyectoFinal.UI.Registros
                 {
                     LlenaCampos(ventas);
                 }
-
             }
             else
             {
-                MessageBox.Show("Datos Invalidos");
+                MessageBox.Show("No se encontro la venta", "Debe Registrarla!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -274,22 +272,19 @@ namespace ProyectoFinal.UI.Registros
             }
         }
 
-
-
-
         private void AgregarProductometroButton_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(IDProductosnumericUpDown.Value);
             int cantidad = Convert.ToInt32(this.CantidadnumericUpDown.Value);
             Productos producto = new RepositorioBase<Productos>().Buscar(id);
-            DetalleVentas detalleVenta = new DetalleVentas();
-            detalleVenta.Precio = producto.Precio;
-            detalleVenta.Cantidad = cantidad;
-            detalleVenta.ProductoId = id;
-
+            DetalleVentas detalleVenta = new DetalleVentas
+            {
+                Precio = producto.Precio,
+                Cantidad = cantidad,
+                ProductoId = id
+            };
             listaVentas.Add(detalleVenta);
             ActualizarGrid();
-
         }
 
         private void ActualizarGrid()
@@ -302,9 +297,7 @@ namespace ProyectoFinal.UI.Registros
 
         private void ActualizarMonto()
         {
-
             decimal monto = 0;
-            int i = 0;
             if (listaVentas == null)
             {
                 return;
@@ -315,21 +308,19 @@ namespace ProyectoFinal.UI.Registros
                 item.CalularSubTotal();
                 monto += item.Subtotal;
             }
-
             this.MontometroTextBox.Text = monto.ToString();
             this.TotalmetroTextBox.Text = monto.ToString();
         }
 
         private void EliminarFilametroButton_Click(object sender, EventArgs e)
         {
-            errorProvider.Clear();
             try
             {
-                if (Detalles.Count > 0)
+                if (listaVentas.Count > 0)
                 {
-                    if (DetalledataGridView.SelectedCells.Count > 0)
+                    if (DetalledataGridView.SelectedCells.Count <= 0)
                     {
-                        Detalles.RemoveAt(DetalledataGridView.CurrentRow.Index);
+                        listaVentas.RemoveAt(DetalledataGridView.CurrentRow.Index);
                         ActualizarGrid();
                         ActualizarMonto();
                     }
@@ -340,14 +331,6 @@ namespace ProyectoFinal.UI.Registros
                 }
             }
             catch (Exception) { }
-        }
-
-        private void DetalledataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (DetalledataGridView.SelectedCells.Count > 0)
-            {
-                EliminarFilametroButton.Enabled = false;
-            }
         }
 
         private void EliminarmetroButton_Click(object sender, EventArgs e)

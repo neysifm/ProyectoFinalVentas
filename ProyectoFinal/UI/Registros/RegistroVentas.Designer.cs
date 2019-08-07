@@ -220,6 +220,7 @@
             // 
             this.EliminarFilametroButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarFilametroButton.BackgroundImage")));
             this.EliminarFilametroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EliminarFilametroButton.Enabled = false;
             this.EliminarFilametroButton.Location = new System.Drawing.Point(8, 216);
             this.EliminarFilametroButton.Name = "EliminarFilametroButton";
             this.EliminarFilametroButton.Size = new System.Drawing.Size(75, 23);
